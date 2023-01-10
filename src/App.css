@@ -31,3 +31,22 @@ th {
   border-bottom: 1px solid #fff;
   padding: 10px;
 }
+
+.form {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.input {
+  width: 400px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  
+}
+
+.submit-btn {
+  width: 70px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
