@@ -1,10 +1,12 @@
-import './App.css';
+import './App.scss';
+import AppRoutes from './components/routes/routes';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
+    <div className="container">
+        {/* @ts-ignore */}
+        <AppRoutes/>
+      </div>
   );
 }
 

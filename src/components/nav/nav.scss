@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.header {
+    grid-column: col-start 1 / col-end;
+    height: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &__left-items {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
