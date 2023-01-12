@@ -11,8 +11,16 @@
         height: 10rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
-        background-color: $thirtialy-color;
+
+        .img {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
     }
+
+  
 
     &__info {
         padding: 0 1rem;
@@ -35,15 +43,17 @@
             }
 
             .profile-image {
-                background-color: red;
-               
                 width: 8rem;
                 height: 9rem;
                 margin-top: -4rem;
-                background-color: #fff;
                 border-radius: 3rem;
                 border: .4rem solid $thirtialy-color;
-                
+             
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2.5rem;
+                }
             }
 
             .following {
