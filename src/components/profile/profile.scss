@@ -1,0 +1,62 @@
+@import '../../assets/styles/variables.scss';
+.profile {
+    grid-column: 1 / 3;
+
+    // padding: 2rem;
+    border-radius: 2rem;
+    height: 30rem;
+    // position: relative;
+
+    &__background {
+        height: 10rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        background-color: $thirtialy-color;
+    }
+
+    &__info {
+        padding: 0 1rem;
+        &--primary {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+
+            .followers {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                &__label {
+                    text-align: center;
+                    margin-top: -1rem;
+                    color: $dark-white;
+                }
+            }
+
+            .profile-image {
+                background-color: red;
+               
+                width: 8rem;
+                height: 9rem;
+                margin-top: -4rem;
+                background-color: #fff;
+                border-radius: 3rem;
+                border: .4rem solid $thirtialy-color;
+                
+            }
+
+            .following {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                &__label {
+                    text-align: center;
+                    color: $dark-white;
+                    margin-top: -1rem;
+                }
+            }
+        }
+    }
+}

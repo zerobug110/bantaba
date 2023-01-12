@@ -3,11 +3,9 @@
 .header {
     grid-column: col-start 1 / col-end;
     height: 10rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 
     &__left-items {
         display: flex;
@@ -18,6 +16,12 @@
     &__nav-list {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 2.5rem;
+        &--item {
+            width: 2.5rem;
+            height: 2.5rem;
+            fill: $white;
+            cursor: pointer;
+        }        
     }
 }

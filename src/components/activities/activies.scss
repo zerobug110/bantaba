@@ -1,5 +1,7 @@
 @import '../../assets/styles/variables.scss';
-.card {
+
+.activities {
     background-color: $secondary-color;
+    grid-column: 9 / -1;
     border-radius: 1rem;
-}
+}    

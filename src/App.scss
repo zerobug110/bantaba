@@ -56,10 +56,10 @@ html {
   grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
   background-color: $primar-color;;
   position: relative;
-  height: 100vh;
+  // height: 100vh;
   color: $white;
   font-size: 1.6rem;
-
+  // display: block;
 }
 
 .app-icon {
