@@ -1,5 +1,23 @@
 @import '../../assets/styles/variables.scss';
 .post {
     grid-column: 3 / 9;
-    // background-color: $secondary-color;
+
+    &__upload {
+        padding: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__status {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        &--item {
+            width: 8rem;
+            height: 10rem;
+            background-color: $secondary-color;
+            border-radius: 2rem;
+            border: .1rem solid yellow;
+        }
+    }
 }
