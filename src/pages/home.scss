@@ -6,7 +6,7 @@
     // justify-content: space-between;
 
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     gap: 1rem;
 
     min-height: 100vh;
@@ -17,10 +17,10 @@
     }
 
     .post {
-        grid-column: 3 / 9;
+        grid-column: 3 / 8;
     }
 
     .activities {
-        grid-column: 9 / -1;
+        grid-column: 8 / -1;
     }    
 }
