@@ -1,5 +1,6 @@
 
-import { ChatIcon, HomeIcon, LikeIcon, NotificationIcon } from '../../assets/icons/icons';
+import { ChatIcon, HomeIcon, LikeIcon, MagnifyingGlassIcon, NotificationIcon } from '../../assets/icons/icons';
+import { Card } from '../card/card';
 import './nav.scss';
 
 export const Nav = () => {
@@ -10,7 +11,10 @@ export const Nav = () => {
                     logo
                 </div>
                 <div className="header__left-items--search">
-                    search
+                    <input type="text" placeholder="Search" className='input'/>
+                    <div className="search-icon">
+                        <MagnifyingGlassIcon color={"white"} />
+                    </div>
                 </div>
             </div>
             <div className="header__nav-list">
@@ -27,8 +31,11 @@ export const Nav = () => {
                     <ChatIcon/>
                 </div>
             </div>
-            <div className="header__accounts">account</div>
+
+            <div className="header__accounts">
+                <Card>accounts</Card>
+            </div>
 
         </header>
     )
-}
+} 

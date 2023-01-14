@@ -17,7 +17,7 @@ body {
       }
      
       &::-webkit-scrollbar-track {
-        background-color: #ebebeb;
+        background-color: $primary-color;
         -webkit-border-radius: 1rem;
         border-radius: 1rem;
       }
@@ -25,7 +25,7 @@ body {
       &::-webkit-scrollbar-thumb {
         -webkit-border-radius: 1rem;
         border-radius: 1rem;
-        background: #ebebeb; 
+        background: $secondary-color; 
       }
 }
 
@@ -54,7 +54,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
-  background-color: $primar-color;;
+  background-color: $primary-color;;
   position: relative;
   // height: 100vh;
   color: $white;

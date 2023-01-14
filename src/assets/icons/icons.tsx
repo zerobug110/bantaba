@@ -139,7 +139,9 @@ export const ChatIcon = () => {
 
 export const ImageIcon = () => {
   return(
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+    fill="#fff"
+    >
     <path d="M13.5 6c-.8 0-1.5.7-1.5 1.5S12.7 9 13.5 9 15 8.3 15 7.5 14.3 6 13.5 6zM19 2H5C3.3 2 2 3.3 2 5v14c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3V5c0-1.7-1.3-3-3-3zm1 11.9L18.1 12c-1.2-1.1-3.1-1.1-4.2 0l-.9.9-2.9-2.9C8.9 8.9 7 8.9 5.9 10L4 11.9V5c0-.6.4-1 1-1h14c.6 0 1 .4 1 1v8.9z"></path>
   </svg>
   )
@@ -149,7 +151,7 @@ export const VideoIcon = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
       <path
-        fill="#222"
+        fill="#fff"
         d="M51.83 8H12.17a10 10 0 00-10 10v28a10 10 0 0010 10h39.66a10 10 0 0010-10V18a10 10 0 00-10-10zm-9.12 26.64l-16.41 8.8a3 3 0 01-1.42.36 3 3 0 01-3-3V23.2a3 3 0 014.42-2.64l16.41 8.8a3 3 0 010 5.28zm-16.83-9.77L39.17 32l-13.29 7.13z"
       ></path>
     </svg>
@@ -209,7 +211,8 @@ export const UpArrowIcon = () => {
   )
 }
 
-export const MagnifyingGlassIcon = () => {
+{/*@ts-ignore*/}
+export const MagnifyingGlassIcon = ({color}) => {
   return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.001 256.001">
       <path fill="none" d="M0 0H256V256H0z"></path>
@@ -217,8 +220,9 @@ export const MagnifyingGlassIcon = () => {
         cx="116"
         cy="116"
         r="84"
-        fill="none"
+        fill = "none"
         stroke="#000"
+        // stroke={color.fill }
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"
@@ -226,6 +230,7 @@ export const MagnifyingGlassIcon = () => {
       <path
         fill="none"
         stroke="#000"
+        // stroke={color.fill }
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="16"

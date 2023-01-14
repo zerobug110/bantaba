@@ -1,5 +1,5 @@
 @import '../../App.scss';
-
+@import '../../assets/styles/variables.scss';
 .header {
     grid-column: col-start 1 / col-end;
     height: 10rem;
@@ -11,12 +11,38 @@
         display: flex;
         align-items: center;
         gap: 2rem;
+
+        &--search {
+        //  width: 15rem;
+         position: relative;
+
+         .search-icon {
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            background-color: $secondary-color;
+            // fill: $white;
+            // color: $white
+         }
+            .input {
+                width: 25rem;
+                background-color: $secondary-color;
+                border: none;
+                outline: none;
+                border-radius: 2rem;
+                padding: .5rem 1rem;
+                color: $white;
+            }
+        }
     }
 
     &__nav-list {
         display: flex;
         align-items: center;
-        gap: 2.5rem;
+        gap: 3rem;
+        width: 50rem;
         &--item {
             width: 3rem;
             height: 3rem;

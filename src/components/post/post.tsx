@@ -1,5 +1,6 @@
 import { Card } from "../card/card"
-import './post.scss';
+import './post-style.scss';
+import { UploadPost } from "./upload-post";
 
 export const Post = () => {
     return(
@@ -14,13 +15,24 @@ export const Post = () => {
                 }
 
             </div>
-            <Card>
-                <div className="post__upload"></div>
-            </Card>
-            <div className="post__list">
-                 <Card >
-                    post 1
+
+            {/* upload post component */}
+            <div className="post__upload">
+                <Card>
+                    <UploadPost/>
                 </Card>
+            </div>
+
+          
+            <div className="post__list">
+            {[1,2,3].map(item => (
+                
+                <Card >
+                      {/* postlist component */}
+                    <div className="post__list--item"></div>
+                </Card>
+            ))}
+                 
             </div>
            
         </div>
