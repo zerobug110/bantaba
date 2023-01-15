@@ -170,7 +170,7 @@ export const DownArrowIcon = () => {
     >
       <path
         fill="none"
-        stroke="#000"
+        stroke="#fff"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit="10"

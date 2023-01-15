@@ -11,7 +11,7 @@
         overflow: hidden;
         &--item {
             min-width: 8rem;
-            height: 10rem;
+            height: 8rem;
             background-color: $secondary-color;
             border-radius: 2rem;
             border: .3rem solid $secondary-color;
@@ -39,6 +39,7 @@
                     height: 6rem;
                     width: 7rem;
                     border-radius: 50%;
+                    border: .3rem solid $thirtialy-color;
 
                     .img {
                         width: 100%;
@@ -48,7 +49,7 @@
                 }
 
                 .input {
-                    background-color: $thirtialy-color;
+                    background-color: $primary-color;
                     color: $white;
                     padding: 1rem;
                     width: 100%;
@@ -57,10 +58,10 @@
                     outline: none;
                     font-size: 1.6rem;
                 }
-
             }
 
             .upload-functionalities {
+                margin-left: 8.5rem;
                 margin-top: 1rem;
                 display: flex;
                 align-items: center;
@@ -70,7 +71,7 @@
                     padding: .5rem 1rem;
                     border-radius: 2rem;
                     cursor: pointer;
-                    background-color: $thirtialy-color;
+                    background-color: $primary-color;
 
                     display: flex;
                     align-items: center;
