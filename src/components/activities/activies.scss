@@ -4,4 +4,10 @@
     background-color: $secondary-color;
     grid-column: 9 / -1;
     border-radius: 1rem;
+    padding: 1rem;
+
+    &__heading {
+        text-transform: capitalize;
+        text-transform: 450;
+    }
 }    

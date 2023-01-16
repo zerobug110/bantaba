@@ -9,6 +9,10 @@
         
         margin-bottom: 2rem;
         overflow: hidden;
+
+        .username {
+            text-transform: capitalize;
+        }
         &--item {
             min-width: 8rem;
             height: 8rem;
@@ -115,7 +119,70 @@
 
         &--item {
             margin-bottom: 1rem;
-            height: 50rem;
+            // height: 50rem;
+            padding: 2rem;
+            
+            .post-profile {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                &__info {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    &--image {
+                        background-color: red;
+                        width: 4rem;
+                        height: 4rem;
+                        border-radius: 50%;
+                        
+                        .img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    &--username {
+                        font-size: 1.7rem;
+                        font-weight: 550;
+                        text-transform: capitalize;
+                    }
+                }
+                
+                &__options {
+                    // background-color: blue;
+                }
+            }
+
+            .post-timestamp {
+                font-size: 1.5rem;
+                color: $dark-white;
+                margin-left: 5rem;
+                margin-top: -1.3rem;
+            }      
+            
+            .post-content {
+                margin-left: 5rem;
+
+                &__description {
+                    margin-bottom: 2rem;
+                }
+
+                &__media {
+                    height: 40rem;
+                    width: 100%;
+                    border-radius: 2rem;
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 2rem;
+                    }
+                }
+            }
+            
+            
         }
     }
 }

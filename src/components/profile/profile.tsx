@@ -23,9 +23,14 @@ export const Profile = () => {
                     <div className="following">
                         <div className="following__no">189</div>
                         <div className="following__label">following</div>
-
                     </div>
                   </div>
+                </div>
+                <div className="profile__about">
+                    <p className="profile__about--text">i am a photographer and love to painting as well</p>
+                </div>
+                <div className="profile__edit">
+                    <span className="profile__edit--btn">view profile</span>
                 </div>
             </div>
         </Card>

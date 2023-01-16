@@ -2,7 +2,7 @@
 @import '../../assets/styles/variables.scss';
 .header {
     grid-column: col-start 1 / col-end;
-    height: 10rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,6 +11,7 @@
         width: 30.5rem;
         background-color: $secondary-color;
         border-radius: 3rem;
+        margin-right: 1rem;
 
         &--setting {
             display: flex;

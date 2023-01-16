@@ -1,11 +1,9 @@
 @import '../../assets/styles/variables.scss';
 .profile {
     grid-column: 1 / 3;
-
-    // padding: 2rem;
     border-radius: 2rem;
-    height: 30rem;
-    // position: relative;
+    
+    // height: 40rem;
 
     &__background {
         height: 10rem;
@@ -18,9 +16,7 @@
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
         }
-    }
-
-  
+    }  
 
     &__info {
         padding: 0 1rem;
@@ -44,7 +40,7 @@
 
             .profile-image {
                 width: 9rem;
-                height: 9rem;
+                height: 10rem;
                 margin-top: -4rem;
                 border-radius: 3rem;
                 border: .4rem solid $thirtialy-color;
@@ -67,6 +63,39 @@
                     margin-top: -1rem;
                 }
             }
+        }
+    }
+
+    &__about {
+       padding: 1rem;
+       margin-top: 1rem;
+
+       display: flex;
+       align-items: center;
+
+        &--text {
+            color: $dark-white;
+            text-align: center;
+        }
+    }
+
+    &__edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 1rem;
+        padding: 2rem 0;
+
+        &--btn {
+            color: $white;
+            text-align: center;
+            text-transform: capitalize;
+            width: 25rem;
+            background-color: $thirtialy-color;
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
         }
     }
 }
