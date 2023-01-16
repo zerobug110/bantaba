@@ -8,11 +8,8 @@ export const Post = () => {
     return(
         <div className="post">
             {/* status */}
-            <div className="post__status">
-                {[0,1,2,3,4,5,6,7].map(item =>(
-                    <PostStatus/>
-                
-                ))}
+            <div className="">
+                <PostStatus/>
             </div>
 
             {/* upload post component */}
