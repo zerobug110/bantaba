@@ -131,8 +131,8 @@
                     display: flex;
                     align-items: center;
                     gap: 1rem;
+                    
                     &--image {
-                        background-color: red;
                         width: 4rem;
                         height: 4rem;
                         border-radius: 50%;
@@ -164,7 +164,7 @@
             }      
             
             .post-content {
-                margin-left: 5rem;
+                // margin-left: 5rem;
 
                 &__description {
                     margin-bottom: 2rem;

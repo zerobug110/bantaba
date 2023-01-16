@@ -4,7 +4,7 @@ export const PostItem = () => {
             <div className="post-profile">
                 <div className="post-profile__info">
                     <div className="post-profile__info--image">
-                        <img src="" alt="" className="img" />
+                        <img src="https://images.unsplash.com/photo-1664575599618-8f6bd76fc670?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" className="img" />
                     </div>
                     <div className="post-profile__info--username">elan mosk</div>
                 </div>
