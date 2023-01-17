@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import { ChatIcon, DownArrowIcon, HomeIcon, LikeIcon, MagnifyingGlassIcon, NotificationIcon, UpArrowIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './nav.scss';
@@ -18,25 +19,25 @@ export const Nav = () => {
                 </div>
             </div>
             <div className="header__nav-list">
-                <div className="header__nav-list--item">
+                <Link to ="/" className="header__nav-list--item">
                     <HomeIcon/>
-                </div>
-                <div className="header__nav-list--item">
+                </Link>
+                <Link to ="/likes" className="header__nav-list--item">
                     <LikeIcon/>
-                </div>
-                <div className="header__nav-list--item">
+                </Link>
+                <Link to ="/notification" className="header__nav-list--item">
                     <NotificationIcon/>
-                </div>
-                <div className="header__nav-list--item">
+                </Link>
+                <Link to ="/chat" className="header__nav-list--item">
                     <ChatIcon/>
-                </div>
+                </Link>
             </div>
 
             <div className="header__accounts">
                 
                 <div className="header__accounts--setting">
                     <div className="profile-image">
-                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" className="img" />
+                        <img src="https://images.unsplash.com/photo-1441974231531-c622 7db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" className="img" />
                     </div>
                     <span className="username">muhammed bojang</span>
                     <div className="drop-down-arrow">

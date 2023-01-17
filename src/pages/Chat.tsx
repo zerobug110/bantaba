@@ -1,5 +1,18 @@
+import './chat.scss';
 export const Chat = () => {
     return(
-        <h1>chats</h1>
+        <div className="chat">
+              <div className="chat__contacts">
+                contacts
+              </div>
+              <div className="chat__message">
+                messages
+              </div>
+
+              <div className="chat__contact-details">
+                details
+              </div>
+        </div>
+      
     )
 }
