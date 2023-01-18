@@ -1,8 +1,8 @@
 import { Outlet, Route, Routes  } from "react-router-dom"
-import { Home } from "../../pages/home";
 import {Nav} from '../nav/nav';
 import '../../index.css'
-import { Chat } from "../../pages/Chat";
+import { Chat } from "../../pages/chat/Chat";
+import { Home } from "../../pages/home/home";
 // import '../../App.scss';
 
 const AppRoutes = () => {

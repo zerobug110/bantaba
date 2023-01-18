@@ -1,7 +1,8 @@
 @import '../assets/styles/variables.scss';
-.chat {
+.chat-container {
     grid-column: col-start 1 / col-end;
-    height: 100vh;
+    min-height: 87vh;
+    // height: 100vh;
 
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -29,6 +30,7 @@
     &__contacts {
         grid-column: 1 / 3;
         // background-color: red;
+        
     }
 
     
