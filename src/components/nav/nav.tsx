@@ -1,10 +1,19 @@
 
-import { Link } from 'react-router-dom';
-import { ChatIcon, DownArrowIcon, HomeIcon, LikeIcon, MagnifyingGlassIcon, NotificationIcon, UpArrowIcon } from '../../assets/icons/icons';
+import { ChatIcon, HomeIcon, LikeIcon, MagnifyingGlassIcon, NotificationIcon, UpArrowIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './nav.scss';
+import { Navigation, Route, useLocation, useNavigate } from 'react-router-dom';
 
 export const Nav = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    // const pathMatchedRoute = () => {
+    //     if (route === location.pathname) 
+       
+    //     return true
+    // }
+
     return(
         <header className="header">
             <div className="header__left-items">
@@ -19,18 +28,15 @@ export const Nav = () => {
                 </div>
             </div>
             <div className="header__nav-list">
-                <Link to ="/" className="header__nav-list--item">
+                <div  className="header__nav-list--item" onClick={()=> navigate("/")}>
                     <HomeIcon/>
-                </Link>
-                <Link to ="/likes" className="header__nav-list--item">
-                    <LikeIcon/>
-                </Link>
-                <Link to ="/notification" className="header__nav-list--item">
+                </div>
+                <div  className="header__nav-list--item" onClick={() => navigate("/notifications")}>
                     <NotificationIcon/>
-                </Link>
-                <Link to ="/chat" className="header__nav-list--item">
+                </div>
+                <div className="header__nav-list--item" onClick={()=> navigate("/chat")}>
                     <ChatIcon/>
-                </Link>
+                </div>
             </div>
 
             <div className="header__accounts">

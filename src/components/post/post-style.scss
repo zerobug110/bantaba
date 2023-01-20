@@ -81,32 +81,50 @@
             }
 
             .upload-functionalities {
-                margin-left: 8.5rem;
-                margin-top: 1rem;
                 display: flex;
                 align-items: center;
-                gap: 2rem;
+                justify-content: space-between;
 
-                .upload-video, .upload-image {
-                    padding: .5rem 1rem;
-                    border-radius: 2rem;
-                    cursor: pointer;
-                    background-color: $primary-color;
-
+                &__upload-btns {
+                    margin-left: 8.5rem;
+                    margin-top: 1rem;
                     display: flex;
                     align-items: center;
-                    gap: 1rem;
-
-                    .video-icon {
-                        width: 3rem;
-                        height: 3rem;
+                    gap: 2rem;
+    
+                    .upload-video, .upload-image {
+                        font-weight: 550;
+                        padding: .5rem 1rem;
+                        border-radius: 2rem;
+                        cursor: pointer;
+                        background-color: $primary-color;
+    
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+    
+                        .video-icon {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+    
+                        .image-icon {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
                     }
 
-                    .image-icon {
-                        width: 3rem;
-                        height: 3rem;
-                    }
                 }
+
+                .post-btn {
+                    font-weight: 550;
+                    text-transform: capitalize;
+                    padding: .5rem 2rem;
+                    border-radius: 2rem;
+                    cursor: pointer;
+                    background-color: $primary-color; 
+                }
+                
             }
             
         }

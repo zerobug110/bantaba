@@ -3,6 +3,7 @@ import {Nav} from '../nav/nav';
 import '../../index.css'
 import { Chat } from "../../pages/chat/Chat";
 import { Home } from "../../pages/home/home";
+import { Notifications } from "../../pages/notifications/notifications";
 // import '../../App.scss';
 
 const AppRoutes = () => {
@@ -17,6 +18,7 @@ const AppRoutes = () => {
                 <Routes>     
                     <Route index element={<Home/>}/>
                     <Route path="/chat" element={<Chat/>}/>
+                    <Route path="/notifications" element={<Notifications/>}/>
                 </Routes>
             </>
             

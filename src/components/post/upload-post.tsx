@@ -10,18 +10,21 @@ export const UploadPost = () => {
                 <input type="text" name="" id="" placeholder="Tell your thought to your friends..."  className="input"/>
             </div>
             <div className="upload-functionalities">
-                <div className="upload-image">
-                <div className="image-icon">
-                        <ImageIcon/>
-                    </div>
+                <div className="upload-functionalities__upload-btns">
+                    <div className="upload-image">
+                        <div className="image-icon">
+                            <ImageIcon/>
+                        </div>
                     <span className="label">image</span>
                 </div>
-                <div className="upload-video">
-                <div className="video-icon">
-                    <VideoIcon/>
+                    <div className="upload-video">
+                        <div className="video-icon">
+                            <VideoIcon/>
+                        </div>
+                        <span className="label">video</span>
+                    </div>    
                 </div>
-                <span className="label">video</span>
-                </div>
+                <div className="post-btn">post</div>                
             </div>
 
         </div>
