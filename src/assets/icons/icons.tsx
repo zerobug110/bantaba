@@ -246,3 +246,26 @@ export const VideoCallIcon = () => {
     </svg>
   )
 }
+
+export const userIcon = () => {
+  return(
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path fill="none" d="M0 0h24v24H0V0z"></path>
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"></path>
+  </svg>
+  )
+}
+
+
+export const lockIcon = () => {
+  return(
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M17 9V7c0-2.8-2.2-5-5-5S7 4.2 7 7v2c-1.7 0-3 1.3-3 3v7c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3v-7c0-1.7-1.3-3-3-3zM9 7c0-1.7 1.3-3 3-3s3 1.3 3 3v2H9V7zm4 10c0 .6-.4 1-1 1s-1-.4-1-1v-3c0-.6.4-1 1-1s1 .4 1 1v3z"></path>
+    </svg>
+  )
+}
