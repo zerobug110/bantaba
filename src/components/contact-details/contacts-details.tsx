@@ -1,3 +1,4 @@
+import { CallIcon, VideoCallIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './contacts-details.scss';
 export const ContactDetails = () => {
@@ -11,9 +12,13 @@ export const ContactDetails = () => {
                     <span className="contact-details__info--username">mariam jobe</span>
                 </div>
                 <div className="contact-details__actions">
-                    <span className="contact-details__actions--btn">call</span>
-                    <span className="contact-details__actions--btn">video call</span>
-                    <span className="contact-details__actions--btn">send media</span>
+                    <span className="contact-details__actions--btn">
+                        <CallIcon/>
+                    </span>
+                    <span className="contact-details__actions--btn">
+                        <VideoCallIcon />
+                    </span>
+                    <span className="contact-details__actions--btn">se</span>
                 </div>
             </div> 
         </Card>
