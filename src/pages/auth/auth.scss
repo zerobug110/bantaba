@@ -2,5 +2,33 @@
 .auth {
     grid-column: col-start 1 / col-end;
     background-color: $primary-color;
-    background-color: red;
+    min-height: 100vh;
+
+    .sign-up {
+        background-color: $secondary-color;
+        width: 40rem;
+        text-align: center;
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &--input {
+                margin-top: 1rem;
+
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                
+                .input {
+                    background-color: $thirtialy-color;
+                    padding: 1rem;
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+    }
+
 }
