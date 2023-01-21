@@ -1,8 +1,11 @@
 @import "../../assets/styles/variables.scss";
 .auth {
-    grid-column: col-start 1 / col-end;
+    grid-column: full-start  / full-end;
     background-color: $primary-color;
     min-height: 100vh;
+
+    background-image: url("https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
 
     .sign-up {
         background-color: $secondary-color;
