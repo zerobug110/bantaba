@@ -1,5 +1,10 @@
+import './auth.scss'
+import { SignUp } from "./sign-up"
+
 export const Auth = () => {
     return (
-        <h1>auth</h1>
+        <div className="auth">
+            <SignUp />
+        </div>
     )
 }
