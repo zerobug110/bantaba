@@ -48,7 +48,7 @@ export const Nav = () => {
                     <span className="username">muhammed bojang</span>
                     <div className="drop-down-arrow">
                         {/* <DownArrowIcon/> */}
-                        <UpArrowIcon/>
+                        {/* <UpArrowIcon/> */}
                     </div>
                 </div>
             

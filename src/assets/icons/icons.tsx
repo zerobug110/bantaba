@@ -274,10 +274,8 @@ export const GoogleIcon = () => {
   return(
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2443"
-    height="2500"
     preserveAspectRatio="xMidYMid"
-    viewBox="0 0 256 262"
+    viewBox="0 0 244 24"
   >
     <path
       fill="#4285F4"
