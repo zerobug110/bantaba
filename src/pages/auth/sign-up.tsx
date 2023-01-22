@@ -5,78 +5,47 @@ import { useState } from "react"
 import { AppleIcon, GoogleIcon, MailIcon } from "../../assets/icons/icons"
 
 
-import ViewSlider from 'react-view-slider'
-
 export const SignUp = () => {
-    enum STEPS {
-        UPLOAD_IMAGE = 0,
-        SHARE_POST = 1,
-    }
-    const [step, setStep] = useState(0);
     const [showPassword, setShowPassword] = useState('')
     const handleShowPassword = () => {
         setShowPassword((prevState):string | any => !prevState)
     }
 
-    const VIEWS = [
-		({ index, active, transitionState }:any) => (
-			<section
-				className="first-slide slider"
-				hidden={index !== STEPS.UPLOAD_IMAGE}
-			>
-				<div>
-					<div className="slider-header">
-						{/* <button onClick={() => handleClose()}> */}
-							<span className="app-icon">
-								{/* <CloseIcon></CloseIcon> */}
-							</span>
-						{/* </button> */}
-						<button className="slider-movement" onClick={() => setStep(1)}>
-							Next
-						</button>
-					</div>
-					{/* <PostMediaForm user={app.user}></PostMediaForm> */}
-				</div>
-			</section>
-		),
-		({ index, active, transitionState }:any) => (
-			<section
-				className="secound-slide slider"
-				hidden={index !== STEPS.SHARE_POST}
-			>
-				<div className="slider-header">
-					<button onClick={() => setStep(0)}>
-						<span className="app-icon">
-							{/* <BackIcon></BackIcon> */}
-						</span>
-					</button>
-				</div>
-			</section>
-		),
-	];
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: '',
+    })
 
-	const viewToRender = VIEWS[step];
-
+    const {name,email, password} = formData
+    
+    const onChange = (e:string | any) => {
+        setFormData((prevState):any=> ({
+            [e.target.id]: e.target.value       
+        }))
+    }
     return(
         <div className="sign-up">
-            <ViewSlider
-					// renderView={viewToRender}
-					numViews={2}
-					// activeView={step}
-				></ViewSlider>
-
             <form action="" className="sign-up__form">
             <div className="sign-up__form--input">
-                    <input type="text" name="username" id="" className="input" placeholder="name"/>
+                    <input type="text" name="username" id="name" className="input" placeholder="name"/>
                 </div>
                 <div className="sign-up__form--input">
                     <input type="text" name="username" id="" className="input" placeholder="username"/>
                 </div>
                 <div className="sign-up__form--input">
-                    <input type="email" name="email" id="" className="input" placeholder="Email"/>
+                    <input type="email" name="email" id="email" value={email} className="input" placeholder="Email"/>
                 </div>
                 <div className="sign-up__form--input">
-                    <input type={showPassword ? 'text' : 'password'} name="password" id="" className="input" placeholder="Password"/>
+                    <input 
+                        type={showPassword ? 'text' : 'password'} 
+                        name="password" 
+                        id="password" 
+                        value={password} 
+                        className="input" 
+                        placeholder="Password"
+                        onChange={(e)=> {onChange(e)}}
+                    />
                     <span onClick={()=> {handleShowPassword()}}>show password</span>
                 </div>
 

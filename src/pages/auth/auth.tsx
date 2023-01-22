@@ -60,6 +60,7 @@ export const Auth = () => {
 					renderView={viewToRender}
 					numViews={2}
 					activeView={step}
+                    animateHeight
 				></ViewSlider>
         </div>
     )
