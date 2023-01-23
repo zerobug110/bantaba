@@ -7,7 +7,7 @@ export const UploadPost = () => {
                 <div className="profile">
                     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" className="img" />
                 </div>
-                <input type="text" name="" id="" placeholder="Tell your thought to your friends..."  className="input"/>
+                <textarea name="" id="" placeholder="Tell your thought to your friends..."  className="input"/>
             </div>
             <div className="upload-functionalities">
                 <div className="upload-functionalities__upload-btns">

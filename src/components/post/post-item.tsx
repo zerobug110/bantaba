@@ -1,3 +1,5 @@
+import { LikeIcon } from "../../assets/icons/icons"
+
 export const PostItem = () => {
     return (
         <div className="post__list--item">
@@ -27,9 +29,24 @@ export const PostItem = () => {
 
             <div className="post-comment">
                 <div className="post-comment__reactions">
-                    <div className="reaction">like</div>
-                    <div className="reaction">like</div>
-                    <div className="reaction">like</div>
+                    <div className="reaction">
+                        <div className="reaction__icon">
+                            <LikeIcon />
+                        </div>
+                        <span className="reaction__count">43</span>
+                    </div>
+                    <div className="reaction">
+                        <div className="reaction__icon">
+                            <LikeIcon />
+                        </div>
+                        <span className="reaction__count">43</span>
+                    </div>
+                    <div className="reaction">
+                        <div className="reaction__icon">
+                            <LikeIcon />
+                        </div>
+                        <span className="reaction__count">43</span>
+                    </div>
                 </div>
                 <div className="post-comment__profile">
                     <div className="post-comment__profile--image">

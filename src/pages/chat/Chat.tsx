@@ -2,11 +2,16 @@ import { ChatList } from '../../components/chats/chat-message';
 import { ContactDetails } from '../../components/contact-details/contacts-details';
 import { ContactList } from '../../components/contacts/contact-list';
 import './chat.scss';
+import { Data } from '../../components/data/data';
+
 export const Chat = () => {
+  console.log(Data)
+
+  // let Data = data
     return(
         <div className="chat-container">
               <div className="chat-container__contacts">
-                <ContactList />
+                <ContactList Data= {Data}/>
               </div>
               <div className="chat-container__message">
                 <ChatList />

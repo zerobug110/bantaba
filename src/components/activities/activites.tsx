@@ -5,7 +5,12 @@ export const Activities = () => {
     return(
         <Card>
             <div className="activities">
-                <h4 className='activities__heading'>trends for you</h4>
+                <div className='activities__heading'>trends for you</div>
+            </div>
+            <div className="trend-list">
+                <div className="trend-list__item">
+                    football
+                </div>
             </div>
         </Card>
      

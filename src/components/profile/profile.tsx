@@ -27,7 +27,7 @@ export const Profile = () => {
                   </div>
                 </div>
                 <div className="profile__about">
-                    <p className="profile__about--text">i am a photographer and love to painting as well</p>
+                    <p className="profile__about--text">"I am a photographer and love to painting as well"</p>
                 </div>
                 <div className="profile__edit">
                     <span className="profile__edit--btn">view profile</span>

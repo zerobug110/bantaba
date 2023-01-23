@@ -8,46 +8,36 @@ import { CloseIcon } from '../../assets/icons/icons';
 
 export const Auth = () => {
     enum STEPS {
-        UPLOAD_IMAGE = 0,
-        SHARE_POST = 1,
+        SIGN_IN = 0,
+        SIGN_UP = 1,
     }
     const [step, setStep] = useState(0);
 
+	
     const VIEWS = [
 		({ index, active, transitionState }:any) => (
 			<section
 				className="first-slide slider"
-				hidden={index !== STEPS.UPLOAD_IMAGE}
+				hidden={index !== STEPS.SIGN_IN}
 			>
 				<div>
 					<div className="slider-header">
-							<span className="app-icon">
-								{/* <CloseIcon></CloseIcon> */}
-							</span>
-						<button className="slider-movement" onClick={() => setStep(1)}>
-							Next
-						</button>
+						<span className="app-icon">
+							{/* <CloseIcon></CloseIcon> */}
+						</span>
 
 					</div>
 				</div>
-                <SignUp />
+                <SignIn setStep={setStep}/>
 			</section>
 		),
 		({ index, active, transitionState }:any) => (
 			<section
 				className="secound-slide slider"
-				hidden={index !== STEPS.SHARE_POST}
+				hidden={index !== STEPS.SIGN_UP}
 			>
-				<div className="slider-header">
-					<button onClick={() => setStep(0)}>
-						<span className="app-icon">
-							{/* <BackIcon></BackIcon> */}
-                            back
-						</span>
-					</button>
-				</div>
-
-            <SignIn />
+			
+            <SignUp setStep= {setStep}/>
 			</section>
 		),
 	];
@@ -60,7 +50,6 @@ export const Auth = () => {
 					renderView={viewToRender}
 					numViews={2}
 					activeView={step}
-                    animateHeight
 				></ViewSlider>
         </div>
     )
