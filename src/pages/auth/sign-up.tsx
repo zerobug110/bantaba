@@ -1,33 +1,56 @@
 
 
-// import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
-// import {db} from '../../utils/firebase/firebase.config'
-
+import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
 import { useState } from "react"
 import { AppleIcon, GoogleIcon, MailIcon, VisibleIcon, } from '../../assets/icons/icons';
+import { Navigate } from 'react-router-dom';
+import { db } from '../../utils/firebase/firebase.config';
 
 
 export const  SignUp = ({setStep}:any) => {
+
     const [showPassword, setShowPassword] = useState('')
     const handleShowPassword = () => {
         setShowPassword((prevState):string | any => !prevState)
     }
 
     const [formData, setFormData] = useState({
+        name: '',
         email: '',
         password: '',
+        username: ''
+        
     })
 
-    const {email, password} = formData
+
+    const {email, password, name, username} = formData
+
     const onChange = (e:string | any) => {
         setFormData((prevState):any=> ({
             [e.target.id]: e.target.value       
         }))
     }
 
+    const onSubmit = async (e:any) => {
+        e.preventDefault()
+        try {
+            const auth = getAuth()
+            const userCrediantials = await createUserWithEmailAndPassword(auth, email, password)
+            const user = userCrediantials.user
+
+            // @ts-ignore
+            updateProfile(auth.currentUser , {
+                displayName: name,
+            })
+            // navigate("/"):
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <div className="sign-up">
-            <form action="" className="sign-in__form">
+            <form action="" className="sign-in__form" onSubmit={onSubmit}>
                 <h3 className="sign-in__label">sign up</h3>
                 <div className="sign-in__form--input">
                     <input 
@@ -74,7 +97,7 @@ export const  SignUp = ({setStep}:any) => {
                     </span>
                 </div>
 
-                <button className="sign-in__submit-btn">sign up</button>
+                <button className="sign-in__submit-btn" onClick={onSubmit}>sign up</button>
                 <span className="sign-in__with-google">
                     {/* <GoogleIcon />  */}
                 </span>
