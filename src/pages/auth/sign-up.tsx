@@ -23,6 +23,7 @@ export const  SignUp = ({setStep}:any) => {
     })
 
 
+
     const {email, password, name, username} = formData
 
     const onChange = (e:string | any) => {
@@ -32,6 +33,7 @@ export const  SignUp = ({setStep}:any) => {
     }
 
     const onSubmit = async (e:any) => {
+        
         e.preventDefault()
         try {
             const auth = getAuth()

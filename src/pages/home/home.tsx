@@ -17,7 +17,7 @@ export const Home = () => {
                 <Post/>
             </div>
 
-            <div className="activities">
+            <div className="activities-trends">
                 <Activities/>
             </div>
         </div>
