@@ -3,6 +3,7 @@ import {Nav} from '../nav/nav';
 // import { Chat } from "../../pages/chat/Chat";
 import '../../index.css'
 import { lazy, Suspense } from "react";
+const Profile = lazy(() => import('../profile/profile').then(({Profile})=> ({default: Profile})))
 
 
 // @type-ignore
@@ -24,6 +25,7 @@ const AppRoutes = () => {
                     <Route index element={<Home/>}/>
                     <Route path="/chat" element={<Chat/>}/>
                     <Route path="/notifications" element={<Notifications/>}/>
+                    <Route path="/user-profile" element={<Profile/>}/>
                 </Routes>
                </Suspense>
             </>
