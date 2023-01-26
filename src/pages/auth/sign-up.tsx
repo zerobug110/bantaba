@@ -103,7 +103,7 @@ export const  SignUp = ({setStep}:any) => {
                 <span className="sign-in__with-google">
                     {/* <GoogleIcon />  */}
                 </span>
-                <h5 className="sign-in__with-label">sign in with </h5>
+                {/* <h5 className="sign-in__with-label">sign in with </h5>
                 <div className="sign-in__with-social-media">
                     <div className="icon">
                         <AppleIcon /> 
@@ -112,7 +112,7 @@ export const  SignUp = ({setStep}:any) => {
                         <AppleIcon /> 
                     </div>
 
-                </div>
+                </div> */}
                 <h5 className="create-account-btn" onClick={()=> setStep(0)}>Aready have an account. sign in</h5>
             </form>
         </div>

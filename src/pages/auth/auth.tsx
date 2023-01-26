@@ -4,7 +4,6 @@ import { SignIn } from './sign-in'
 import { SignUp } from "./sign-up"
 
 import ViewSlider from 'react-view-slider'
-import { CloseIcon } from '../../assets/icons/icons';
 
 export const Auth = () => {
     enum STEPS {
