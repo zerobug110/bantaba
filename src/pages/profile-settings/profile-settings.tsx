@@ -3,3 +3,4 @@ export const ProfileSettings = () => {
         <h1>profile settings</h1>
     )
 }
+

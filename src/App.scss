@@ -12,6 +12,8 @@
 }
 
 body {
+
+  background-color: $primary-color;
     &::-webkit-scrollbar {
         width: 1rem;
       }

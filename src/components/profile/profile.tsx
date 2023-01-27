@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Card } from '../card/card';
 import './profile.scss';
 
 export const Profile = () => {
+    const navigate = useNavigate()
     return(
         <Card >
             <div className="profile">
@@ -29,7 +31,7 @@ export const Profile = () => {
                 <div className="profile__about">
                     <p className="profile__about--text">"I am a photographer and love to painting as well"</p>
                 </div>
-                <div className="profile__edit">
+                <div className="profile__edit" onClick={()=> navigate("/user-profile")}>
                     <span className="profile__edit--btn">view profile</span>
                 </div>
             </div>

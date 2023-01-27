@@ -1,0 +1,72 @@
+@import "../../assets/styles/variables.scss";
+.user-profile-content {
+    grid-column: col-start 1 / col-end;
+    // height: 100vh;
+    margin-top: 2rem;
+    .user-profile {
+        height: 30rem;
+        border-radius: 2rem;
+        background-color: $secondary-color;
+        
+        
+    
+        &__background {
+            height: 30rem;
+            // border-top-left-radius: 2rem;
+            // border-top-right-radius: 2rem;
+            border-radius: 2rem;
+        
+            .img {
+                width: 100%;
+                height: 100%;
+                // border-top-left-radius: 2rem;
+                // border-top-right-radius: 2rem;
+                border-radius: 2rem;
+                
+            }
+        }
+
+        &__details {
+            width: 100%;
+            padding: 0 10rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            // background-color: red;
+            
+            &--image {
+                width: 15rem;
+                height: 15rem;
+                border-radius: 2rem;
+                border: .5rem solid $secondary-color;
+                // position: absolute;
+                margin-top: -5rem;
+                
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2rem;
+                }
+        
+            }
+
+            &--info {
+                margin-top: -2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+             
+                .activities {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    right: 10rem;
+                }
+            }
+        }
+    
+        
+    }
+}
