@@ -1,7 +1,7 @@
 import {  Route, Routes  } from "react-router-dom"
 import {Nav} from '../nav/nav';
 import '../../index.css'
-import { lazy, Suspense } from "react";
+import { lazy, Suspense,FC } from "react";
 
 // lazy routes
 const UserProfile = lazy(() => import('../../pages/user-profile/user-profile').then(({UserProfile})=> ({default: UserProfile})))
@@ -10,7 +10,7 @@ const Chat = lazy(() => import('../../pages/chat/Chat').then(({ Chat }) => ({ de
 const Auth = lazy(()=> import ('../../pages/auth/auth').then(({Auth}) => ({default: Auth})))
 const Notifications = lazy(()=> import ('../../pages/notifications/notifications').then(({Notifications})=>({default: Notifications})))
 
-const AppRoutes = () => {
+const AppRoutes:FC = () => {
         return(
             <>
                <Suspense fallback={<div>Loading...</div>}>

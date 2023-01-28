@@ -1,6 +1,8 @@
 // https://iconscout.com/icons/
 
-export const LogoutIcon = () => {
+import { FC } from "react"
+
+export const LogoutIcon:FC = () => {
     return(
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
       <path fill="none" d="M0 0H256V256H0z"></path>
@@ -32,7 +34,7 @@ export const LogoutIcon = () => {
     )
 }
 
-export const HomeIcon = () => {
+export const HomeIcon:FC = () => {
     return(
       <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +52,7 @@ export const HomeIcon = () => {
     )
 }
 
-export const SendIcon = () => {
+export const SendIcon:FC = () => {
     return(
         <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +63,7 @@ export const SendIcon = () => {
     )
 }
 
-export const LikeIcon = () => {
+export const LikeIcon:FC = () => {
     return(  
       <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +78,7 @@ export const LikeIcon = () => {
     )
 }
 
-export const NotificationIcon = () => {
+export const NotificationIcon:FC = () => {
     return(
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
       <path fill="none" d="M0 0H256V256H0z"></path>
@@ -92,7 +94,7 @@ export const NotificationIcon = () => {
     )
 }
 
-export const CloseIcon = () => {
+export const CloseIcon:FC = () => {
   return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M13.4 12l6.3-6.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0L12 10.6 5.7 4.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l6.3 6.3-6.3 6.3c-.2.2-.3.4-.3.7 0 .6.4 1 1 1 .3 0 .5-.1.7-.3l6.3-6.3 6.3 6.3c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L13.4 12z"></path>
@@ -100,7 +102,7 @@ export const CloseIcon = () => {
   )
 }
 
-export const AddIcon = () => {
+export const AddIcon:FC = () => {
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +115,7 @@ export const AddIcon = () => {
   )
 }
 
-export const ChatIcon = () => {
+export const ChatIcon:FC = () => {
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +139,7 @@ export const ChatIcon = () => {
   )
 }
 
-export const ImageIcon = () => {
+export const ImageIcon:FC = () => {
   return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
     fill="#fff"
@@ -147,7 +149,7 @@ export const ImageIcon = () => {
   )
 }
 
-export const VideoIcon = () => {
+export const VideoIcon:FC = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
       <path
@@ -158,7 +160,7 @@ export const VideoIcon = () => {
   )
 }
 
-export const DownArrowIcon = () => {
+export const DownArrowIcon:FC = () => {
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +183,7 @@ export const DownArrowIcon = () => {
   )
 }
 
-export const UpArrowIcon = () => {
+export const UpArrowIcon:FC = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" >
       <path
@@ -221,7 +223,7 @@ export const MagnifyingGlassIcon = ({color}) => {
   )
 }
 
-export const CallIcon = () => {
+export const CallIcon:FC = () => {
   return(
     <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"
@@ -234,7 +236,7 @@ export const CallIcon = () => {
   )
 }
 
-export const VideoCallIcon = () => {
+export const VideoCallIcon:FC = () => {
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +249,7 @@ export const VideoCallIcon = () => {
   )
 }
 
-export const UserIcon = () => {
+export const UserIcon:FC = () => {
   return(
     <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +264,7 @@ export const UserIcon = () => {
 }
 
 
-export const LockIcon = () => {
+export const LockIcon:FC = () => {
   return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M17 9V7c0-2.8-2.2-5-5-5S7 4.2 7 7v2c-1.7 0-3 1.3-3 3v7c0 1.7 1.3 3 3 3h10c1.7 0 3-1.3 3-3v-7c0-1.7-1.3-3-3-3zM9 7c0-1.7 1.3-3 3-3s3 1.3 3 3v2H9V7zm4 10c0 .6-.4 1-1 1s-1-.4-1-1v-3c0-.6.4-1 1-1s1 .4 1 1v3z"></path>
@@ -270,7 +272,7 @@ export const LockIcon = () => {
   )
 }
 
-export const GoogleIcon = () => {
+export const GoogleIcon:FC = () => {
   return(
     <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -298,7 +300,7 @@ export const GoogleIcon = () => {
 }
 
 
-export const MailIcon = () => {
+export const MailIcon:FC = () => {
   return(
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96">
     <path
@@ -310,7 +312,7 @@ export const MailIcon = () => {
 }
 
 
-export const AppleIcon = () => {
+export const AppleIcon:FC = () => {
   return(
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +324,7 @@ export const AppleIcon = () => {
   )
 }
 
-export const VisibleIcon = () => {
+export const VisibleIcon:FC = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" 
     >

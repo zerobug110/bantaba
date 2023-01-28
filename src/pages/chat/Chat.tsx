@@ -3,8 +3,9 @@ import { ContactDetails } from '../../components/contact-details/contacts-detail
 import { ContactList } from '../../components/contacts/contact-list';
 import './chat.scss';
 import { Data } from '../../components/data/data';
+import { FC } from 'react';
 
-export const Chat = () => {
+export const Chat:FC = () => {
   console.log(Data)
 
   // let Data = data
