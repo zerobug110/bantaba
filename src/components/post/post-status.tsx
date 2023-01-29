@@ -1,5 +1,6 @@
+import { FC } from "react"
 
-export const PostStatus = () => {
+export const PostStatus:FC = () => {
 
     return (
         

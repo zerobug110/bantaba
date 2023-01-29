@@ -1,10 +1,11 @@
+import { FC } from "react";
 import { Card } from "../card/card"
 import { PostItem } from "./post-item";
 import { PostStatus } from "./post-status";
 import './post-style.scss';
 import { UploadPost } from "./upload-post";
 
-export const Post = () => {
+export const Post:FC = () => {
     return(
         <div className="post">
             {/* status */}

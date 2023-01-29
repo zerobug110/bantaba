@@ -1,7 +1,8 @@
 
+import { FC } from 'react';
 import { Card } from '../card/card';
 import './contact-list.scss';
-export const ContactList = ({Data}:any) => {
+export const ContactList:FC = ({Data}:any) => {
 
     return(
         <Card>

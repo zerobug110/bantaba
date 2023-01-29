@@ -1,6 +1,7 @@
 import './skills.scss';
+import { FC } from 'react';
 
-export const Skills = () => {
+export const Skills:FC = () => {
     return (
         <div className='skills'>
             <h2>skills</h2>

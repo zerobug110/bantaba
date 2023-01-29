@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { SendIcon } from '../../assets/icons/icons';
 import './chat-message.scss';
 
-export const ChatList = () => {
+export const ChatList:FC = () => {
     return(
         <div className="chat">
             <div className="chat__list">

@@ -3,11 +3,11 @@
 // import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
 // import {db} from '../../utils/firebase/firebase.config'
 
-import { useState } from "react"
+import { FC, useState } from "react"
 import { AppleIcon, GoogleIcon, MailIcon, VisibleIcon, } from '../../assets/icons/icons';
 
 
-export const SignIn = ({setStep}:any) => {
+export const SignIn:FC = ({setStep}:any) => {
     const [showPassword, setShowPassword] = useState('')
     const handleShowPassword = () => {
         setShowPassword((prevState):string | any => !prevState)

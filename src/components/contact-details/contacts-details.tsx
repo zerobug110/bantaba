@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { CallIcon, VideoCallIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './contacts-details.scss';
-export const ContactDetails = () => {
+export const ContactDetails:FC = () => {
     return(
         <Card>
             <div className="contact-details">

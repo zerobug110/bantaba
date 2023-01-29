@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import './auth.scss'
 import { SignIn } from './sign-in'
 import { SignUp } from "./sign-up"
 
 import ViewSlider from 'react-view-slider'
 
-export const Auth = () => {
+export const Auth:FC = () => {
     enum STEPS {
         SIGN_IN = 0,
         SIGN_UP = 1,

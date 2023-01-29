@@ -1,13 +1,13 @@
 
 
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
-import { useState } from "react"
+import { FC, useState } from "react"
 import { AppleIcon, GoogleIcon, MailIcon, VisibleIcon, } from '../../assets/icons/icons';
 import { Navigate } from 'react-router-dom';
 import { db } from '../../utils/firebase/firebase.config';
 
 
-export const  SignUp = ({setStep}:any) => {
+export const  SignUp:FC = ({setStep}:any) => {
 
     const [showPassword, setShowPassword] = useState('')
     const handleShowPassword = () => {

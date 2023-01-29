@@ -1,6 +1,7 @@
+import { FC } from "react"
 import { LikeIcon } from "../../assets/icons/icons"
 
-export const PostItem = () => {
+export const PostItem:FC = () => {
     return (
         <div className="post__list--item">
             <div className="post-profile">

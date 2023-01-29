@@ -1,8 +1,9 @@
+import { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card } from '../card/card';
 import './profile.scss';
 
-export const Profile = () => {
+export const Profile:FC = () => {
     const navigate = useNavigate()
     return(
         <Card >
