@@ -10,6 +10,7 @@ export const Auth:FC = () => {
         SIGN_IN = 0,
         SIGN_UP = 1,
     }
+
     const [step, setStep] = useState(0);
 
 	
@@ -27,6 +28,7 @@ export const Auth:FC = () => {
 
 					</div>
 				</div>
+				{/* @ts-ignore */}
                 <SignIn setStep={setStep}/>
 			</section>
 		),
@@ -35,7 +37,7 @@ export const Auth:FC = () => {
 				className="secound-slide slider"
 				hidden={index !== STEPS.SIGN_UP}
 			>
-			
+			{/* @ts-ignore */}
             <SignUp setStep= {setStep}/>
 			</section>
 		),

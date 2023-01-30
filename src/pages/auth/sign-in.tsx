@@ -9,6 +9,7 @@ import { AppleIcon, GoogleIcon, MailIcon, VisibleIcon, } from '../../assets/icon
 
 export const SignIn:FC = ({setStep}:any) => {
     const [showPassword, setShowPassword] = useState('')
+  
     const handleShowPassword = () => {
         setShowPassword((prevState):string | any => !prevState)
     }

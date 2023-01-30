@@ -12,6 +12,7 @@ export const Chat:FC = () => {
     return(
         <div className="chat-container">
               <div className="chat-container__contacts">
+                			{/* @ts-ignore */}
                 <ContactList Data= {Data}/>
               </div>
               <div className="chat-container__message">

@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { Card } from '../card/card';
 import './activies.scss';
 
-export const Activities = () => {
+export const Activities:FC = () => {
     return(
         <Card>
             
@@ -16,9 +17,8 @@ export const Activities = () => {
                     </div>
                     <div className="span">...</div>
 
-                </div>
+                </div> 
                 ))
-
                 }
             </div>
             </div>
