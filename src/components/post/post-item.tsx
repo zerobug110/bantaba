@@ -1,7 +1,9 @@
 import { FC } from "react"
+import { useNavigate } from "react-router-dom"
 import { LikeIcon } from "../../assets/icons/icons"
 
 export const PostItem:FC = () => {
+    const navigate = useNavigate()
     return (
         <div className="post__list--item">
             <div className="post-profile">
@@ -10,7 +12,7 @@ export const PostItem:FC = () => {
                         <img src="https://images.unsplash.com/photo-1664575599618-8f6bd76fc670?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" className="img" />
                     </div>
                     <div className="post-profile__info--details">
-                        <div className="username">
+                        <div className="username" onClick={()=> navigate("/user-profile")}>
                             elan mosk
                         </div>
                         <span className="post-timestamp">2 mins ago</span>
