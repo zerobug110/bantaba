@@ -1,6 +1,8 @@
 
 
-// import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
+
+// import {getAuth, provider} from '../../utils/firebase/firebase.config';
+import {linkWithPopup} from  "firebase/auth"
 // import {db} from '../../utils/firebase/firebase.config'
 
 import { FC, useState } from "react"
