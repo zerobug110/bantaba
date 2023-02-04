@@ -3,7 +3,7 @@ import './spinner.scss';
 
 export const Spinner = () => {
     return (
-        <div className="spnner">
+        <div className="spinner">
             <RotatingLines
                 strokeColor="grey"
                 strokeWidth="5"

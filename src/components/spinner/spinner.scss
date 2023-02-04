@@ -1,7 +1,6 @@
 .spinner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-column: col-start 1 / col-end;
     height: 100vh;
-    width: 100vw;
+    display: grid;
+    place-items: center;
 }
