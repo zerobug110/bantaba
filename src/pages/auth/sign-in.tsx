@@ -68,7 +68,7 @@ export const SignIn:FC = ({setStep}:any) => {
                         <AppleIcon /> 
                     </div>
                     <div className="icon">
-                        <AppleIcon /> 
+                        <GoogleIcon /> 
                     </div>
 
                 </div>
