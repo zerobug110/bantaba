@@ -1,2 +1,2 @@
 # bantaba
-a social media application with react, typescript and firebase
+A social media application with react, typescript and firebase
