@@ -1,12 +1,13 @@
 
 
 
-// import {getAuth, provider} from '../../utils/firebase/firebase.config';
-import {linkWithPopup} from  "firebase/auth"
+import {auth, provider} from '../../utils/firebase/firebase.config';
+import {signInWithPopup} from  "firebase/auth"
 // import {db} from '../../utils/firebase/firebase.config'
 
 import { FC, useState } from "react"
-import { AppleIcon, GoogleIcon, CallIcon } from '../../assets/icons/icons';
+import { AppleIcon, GoogleIcon, CallIcon, VisibleIcon } from '../../assets/icons/icons';
+// import { SignUp } from? './sign-up';
 
 
 export const SignIn:FC = ({setStep}:any) => {
@@ -26,6 +27,12 @@ export const SignIn:FC = ({setStep}:any) => {
         setFormData((prevState):any=> ({
             [e.target.id]: e.target.value       
         }))
+    }
+
+    const signInWithGoogle = async () => {
+        // @ts-ignore
+       const result = await signInWithPopup(auth, provider)
+       console.log(result)
     }
 
 
@@ -55,8 +62,8 @@ export const SignIn:FC = ({setStep}:any) => {
                         
                     ></input>
                     <span onClick={()=> {handleShowPassword()}} className ="visible-icon">
-                        {/* <VisibleIcon/> */}
-                        <AppleIcon/>
+                        <VisibleIcon/>
+                        {/* <AppleIcon/> */}
                     </span>
                 </div>
 
@@ -69,7 +76,7 @@ export const SignIn:FC = ({setStep}:any) => {
                     <div className="icon">
                         <AppleIcon /> 
                     </div>
-                    <div className="icon">
+                    <div className="icon" onClick={signInWithGoogle}>
                         <GoogleIcon/> 
                     </div>
                     <div className="icon">
