@@ -1,5 +1,5 @@
 
-import { ChatIcon, HomeIcon, LikeIcon, MagnifyingGlassIcon, NotificationIcon, UpArrowIcon } from '../../assets/icons/icons';
+import { ChatIcon, HomeIcon, MagnifyingGlassIcon, NotificationIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './nav.scss';
 import { Navigation, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -8,12 +8,6 @@ import { FC } from 'react';
 export const Nav:FC = () => {
     const navigate = useNavigate()
     const location = useLocation()
-
-    // const pathMatchedRoute = () => {
-    //     if (route === location.pathname) 
-       
-    //     return true
-    // }
 
     return(
         <header className="header">

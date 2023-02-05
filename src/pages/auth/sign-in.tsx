@@ -6,7 +6,7 @@ import {linkWithPopup} from  "firebase/auth"
 // import {db} from '../../utils/firebase/firebase.config'
 
 import { FC, useState } from "react"
-import { AppleIcon, GoogleIcon, MailIcon, VisibleIcon, } from '../../assets/icons/icons';
+import { AppleIcon, GoogleIcon, CallIcon } from '../../assets/icons/icons';
 
 
 export const SignIn:FC = ({setStep}:any) => {
@@ -60,7 +60,7 @@ export const SignIn:FC = ({setStep}:any) => {
                     </span>
                 </div>
 
-                <button className="sign-in__submit-btn">sign up</button>
+                <button className="sign-in__submit-btn">sign in</button>
                 <span className="sign-in__with-google">
                     {/* <GoogleIcon />  */}
                 </span>
@@ -70,8 +70,12 @@ export const SignIn:FC = ({setStep}:any) => {
                         <AppleIcon /> 
                     </div>
                     <div className="icon">
-                        <GoogleIcon /> 
+                        <GoogleIcon/> 
                     </div>
+                    <div className="icon">
+                        <CallIcon/> 
+                    </div>
+                    
 
                 </div>
                 <h5 className="create-account-btn" onClick={()=> setStep(1)}>I don't have an account. create account</h5>

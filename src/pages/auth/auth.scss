@@ -91,10 +91,15 @@
            gap: 1rem;
 
             .icon {
-                width: 4rem;
-                height: 4rem;
+                width: 5rem;
+                height: 5rem;
                 fill: $white;
                 cursor: pointer;
+                padding: .7rem;
+                border-radius: 1rem;
+                margin-top: 1rem;
+
+                background-color: $thirtialy-color;
             }
         }
 
