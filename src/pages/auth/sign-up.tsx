@@ -2,9 +2,8 @@
 
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
 import { FC, useState } from "react"
-import { AppleIcon, GoogleIcon, MailIcon, VisibleIcon, } from '../../assets/icons/icons';
-import { Navigate } from 'react-router-dom';
-import { db } from '../../utils/firebase/firebase.config';
+import { AppleIcon,  VisibleIcon, } from '../../assets/icons/icons';
+// import { auth, createUserWithEmailAndPassword  } from '../../utils/firebase/firebase.config';
 
 
 export const  SignUp:FC = ({setStep}:any) => {
@@ -49,6 +48,19 @@ export const  SignUp:FC = ({setStep}:any) => {
             console.log(error)
         }
     }
+
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    });
 
     return (
         <div className="sign-up">
@@ -99,7 +111,8 @@ export const  SignUp:FC = ({setStep}:any) => {
                     </span>
                 </div>
 
-                <button className="sign-in__submit-btn" onClick={onSubmit}>sign up</button>
+{/* @ts-ignore */}
+                <button className="sign-in__submit-btn" onClick={createUserWithEmailAndPassword}>sign up</button>
                 <span className="sign-in__with-google">
                     {/* <GoogleIcon />  */}
                 </span>
