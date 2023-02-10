@@ -1,10 +1,4 @@
 
-
-
-import {auth, provider} from '../../utils/firebase/firebase.config';
-import {signInWithPopup} from  "firebase/auth"
-// import {db} from '../../utils/firebase/firebase.config'
-
 import { FC, useState } from "react"
 import { AppleIcon, GoogleIcon, CallIcon, VisibleIcon } from '../../assets/icons/icons';
 // import { SignUp } from? './sign-up';

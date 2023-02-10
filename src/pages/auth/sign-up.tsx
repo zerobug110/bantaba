@@ -1,9 +1,13 @@
 
 
-import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth';
+import {
+    createUserWithEmailAndPassword,
+    updateProfile,
+  } from 'firebase/auth'
 import { FC, useState } from "react"
+import { useNavigate } from 'react-router-dom';
 import { AppleIcon,  VisibleIcon, } from '../../assets/icons/icons';
-// import { auth, createUserWithEmailAndPassword  } from '../../utils/firebase/firebase.config';
+import {auth} from '../../utils/firebase/firebase.config'
 
 
 export const  SignUp:FC = ({setStep}:any) => {
@@ -14,26 +18,28 @@ export const  SignUp:FC = ({setStep}:any) => {
     }
 
     const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        password: "",
-        // username: ''    
+        name: '',
+        email: '',
+        password: '',    
     })
 
-    const {email, password, name, } = formData
+    const {name, email, password } = formData
 
-    const onChange = (e:string | any) => {
+    const onChange = (e:any) => {
         setFormData((prevState):any=> ({
             ...prevState,
             [e.target.id]: e.target.value       
         }))
     }
 
+    const navigate = useNavigate();
+    
     const register = async (e:any) => {
-        
         e.preventDefault()
+
         try {
-            const auth = getAuth()
+            // @ts-ignore
+            // const auth = getAuth()
             const userCrediantials = await createUserWithEmailAndPassword(auth, email, password)
             const user = userCrediantials.user
 
@@ -43,7 +49,8 @@ export const  SignUp:FC = ({setStep}:any) => {
             updateProfile(auth.currentUser , {
                 displayName: name,
             })
-            // navigate("/"):
+    
+            navigate("/");
         } catch (error) {
             console.log(error)
         }
@@ -62,17 +69,9 @@ export const  SignUp:FC = ({setStep}:any) => {
                         id="name" 
                         className="input" 
                         placeholder="Name"
+                        onChange={onChange}
                     />
                 </div>
-                {/* <div className="sign-in__form--input">
-                    <input 
-                        type="text" 
-                        name="username" 
-                        id="" 
-                        className="input" 
-                        placeholder="Username"
-                    />
-                </div> */}
                 <div className="sign-in__form--input">
                     <input 
                         type="email" 
@@ -81,6 +80,7 @@ export const  SignUp:FC = ({setStep}:any) => {
                         value={email} 
                         className="input" 
                         placeholder="Email"
+                        onChange={onChange}
                     />
                 </div>
                 <div className="sign-in__form--input">
