@@ -14,30 +14,30 @@ export const  SignUp:FC = ({setStep}:any) => {
     }
 
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        password: '',
-        username: ''
-        
+        name: "",
+        email: "",
+        password: "",
+        // username: ''    
     })
 
-
-
-    const {email, password, name, username} = formData
+    const {email, password, name, } = formData
 
     const onChange = (e:string | any) => {
         setFormData((prevState):any=> ({
+            ...prevState,
             [e.target.id]: e.target.value       
         }))
     }
 
-    const onSubmit = async (e:any) => {
+    const register = async (e:any) => {
         
         e.preventDefault()
         try {
             const auth = getAuth()
             const userCrediantials = await createUserWithEmailAndPassword(auth, email, password)
             const user = userCrediantials.user
+
+            console.log("User created successfully:", user.email);
 
             // @ts-ignore
             updateProfile(auth.currentUser , {
@@ -49,33 +49,22 @@ export const  SignUp:FC = ({setStep}:any) => {
         }
     }
 
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        // ...
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-    });
 
     return (
         <div className="sign-up">
-            <form action="" className="sign-in__form" onSubmit={onSubmit}>
+            <form action="" className="sign-in__form" >
                 <h3 className="sign-in__label">sign up</h3>
                 <div className="sign-in__form--input">
                     <input 
                         type="text" 
-                        name="username" 
-                        id="" 
+                        name="name"
+                        value={name} 
+                        id="name" 
                         className="input" 
                         placeholder="Name"
                     />
                 </div>
-                <div className="sign-in__form--input">
+                {/* <div className="sign-in__form--input">
                     <input 
                         type="text" 
                         name="username" 
@@ -83,7 +72,7 @@ export const  SignUp:FC = ({setStep}:any) => {
                         className="input" 
                         placeholder="Username"
                     />
-                </div>
+                </div> */}
                 <div className="sign-in__form--input">
                     <input 
                         type="email" 
@@ -112,7 +101,7 @@ export const  SignUp:FC = ({setStep}:any) => {
                 </div>
 
 {/* @ts-ignore */}
-                <button className="sign-in__submit-btn" onClick={createUserWithEmailAndPassword}>sign up</button>
+                <button className="sign-in__submit-btn" onClick={register}>sign up</button>
                 <span className="sign-in__with-google">
                     {/* <GoogleIcon />  */}
                 </span>

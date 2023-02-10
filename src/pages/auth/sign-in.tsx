@@ -29,11 +29,11 @@ export const SignIn:FC = ({setStep}:any) => {
         }))
     }
 
-    const signInWithGoogle = async () => {
-        // @ts-ignore
-       const result = await signInWithPopup(auth, provider)
-       console.log(result)
-    }
+    // const signInWithGoogle = async () => {
+    //     // @ts-ignore
+    //    const result = await signInWithPopup(auth, provider)
+    //    console.log(result)
+    // }
 
 
     return(
@@ -76,7 +76,7 @@ export const SignIn:FC = ({setStep}:any) => {
                     <div className="icon">
                         <AppleIcon /> 
                     </div>
-                    <div className="icon" onClick={signInWithGoogle}>
+                    <div className="icon" >
                         <GoogleIcon/> 
                     </div>
                     <div className="icon">
