@@ -1,13 +1,11 @@
 
 
-import {
-    createUserWithEmailAndPassword,
-    updateProfile,
-  } from 'firebase/auth'
+import {createUserWithEmailAndPassword,updateProfile} from 'firebase/auth'
+import { setDoc, doc, serverTimestamp, } from 'firebase/firestore';
 import { FC, useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import { AppleIcon,  VisibleIcon, } from '../../assets/icons/icons';
-import {auth} from '../../utils/firebase/firebase.config'
+import {auth, db} from '../../utils/firebase/firebase.config'
 
 
 export const  SignUp:FC = ({setStep}:any) => {
@@ -32,6 +30,7 @@ export const  SignUp:FC = ({setStep}:any) => {
         }))
     }
 
+
     const navigate = useNavigate();
     
     const register = async (e:any) => {
@@ -49,6 +48,16 @@ export const  SignUp:FC = ({setStep}:any) => {
             updateProfile(auth.currentUser , {
                 displayName: name,
             })
+
+            const formDataCopy = {...formData}
+            // @ts-ignore
+            delete formDataCopy.password
+            // @ts-ignore
+            formDataCopy.timestamp = serverTimestamp()
+            console.log(formDataCopy)
+        
+            await setDoc(doc(db, 'users', user.uid), formDataCopy)
+        
     
             navigate("/");
         } catch (error) {
@@ -56,6 +65,7 @@ export const  SignUp:FC = ({setStep}:any) => {
         }
     }
 
+    
 
     return (
         <div className="sign-up">
