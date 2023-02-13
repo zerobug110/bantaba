@@ -1,9 +1,10 @@
 
 import { FC, useState } from "react"
 import { AppleIcon, GoogleIcon, CallIcon, VisibleIcon } from '../../assets/icons/icons';
-// import { SignUp } from? './sign-up';
-
-
+import {auth} from '../../utils/firebase/firebase.config';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 export const SignIn:FC = ({setStep}:any) => {
     const [showPassword, setShowPassword] = useState('')
   
@@ -23,11 +24,32 @@ export const SignIn:FC = ({setStep}:any) => {
         }))
     }
 
-    // const signInWithGoogle = async () => {
-    //     // @ts-ignore
-    //    const result = await signInWithPopup(auth, provider)
-    //    console.log(result)
-    // }
+    const navigate = useNavigate()
+    
+    const signIn = () => {
+        try {
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                
+                if (userCredential.user) {
+                    navigate("/chat") 
+                    
+                     toast("Wow so easy!");
+                    
+                }
+            })    
+        } catch (error) {
+            //@ts-ignore
+            console.log(error)
+        }
+
+          
+    }
+
+
+  
 
 
     return(
@@ -61,7 +83,7 @@ export const SignIn:FC = ({setStep}:any) => {
                     </span>
                 </div>
 
-                <button className="sign-in__submit-btn">sign in</button>
+                <button className="sign-in__submit-btn" onClick={signIn}>sign in</button>
                 <span className="sign-in__with-google">
                     {/* <GoogleIcon />  */}
                 </span>
@@ -81,6 +103,7 @@ export const SignIn:FC = ({setStep}:any) => {
                 </div>
                 <h5 className="create-account-btn" onClick={()=> setStep(1)}>I don't have an account. create account</h5>
             </form>
+            <ToastContainer/>
         </div>
     )
 }
