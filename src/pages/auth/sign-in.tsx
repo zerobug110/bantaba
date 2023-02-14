@@ -26,20 +26,19 @@ export const SignIn:FC = ({setStep}:any) => {
 
     const navigate = useNavigate()
     
-    const signIn = () => {
+    const signIn = async (e:any) => {
         try {
-            signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+
+            const userCredential = await signInWithEmailAndPassword(auth, email, password)
+
                 // Signed in 
-                const user = userCredential.user;
                 
                 if (userCredential.user) {
                     navigate("/chat") 
                     
-                     toast("Wow so easy!");
                     
                 }
-            })    
+         
         } catch (error) {
             //@ts-ignore
             console.log(error)
