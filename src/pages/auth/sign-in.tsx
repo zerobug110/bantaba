@@ -5,6 +5,8 @@ import {auth} from '../../utils/firebase/firebase.config';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+
+
 export const SignIn:FC = ({setStep}:any) => {
     const [showPassword, setShowPassword] = useState('')
   
@@ -18,25 +20,28 @@ export const SignIn:FC = ({setStep}:any) => {
     })
 
     const {email, password} = formData
+
     const onChange = (e:string | any) => {
         setFormData((prevState):any=> ({
+            ...prevState,
             [e.target.id]: e.target.value       
         }))
     }
 
     const navigate = useNavigate()
-    
-    const signIn = async (e:any) => {
+
+    // @ts-ignore 
+    const signIn = async (e) => {
+        e.preventDefault()
         try {
 
             const userCredential = await signInWithEmailAndPassword(auth, email, password)
 
-                // Signed in 
-                
+                // Signed in                 
                 if (userCredential.user) {
-                    navigate("/chat") 
-                    
-                    
+                    console.log("successful")
+                    navigate("/") 
+
                 }
          
         } catch (error) {
@@ -44,10 +49,7 @@ export const SignIn:FC = ({setStep}:any) => {
             console.log(error)
         }
 
-          
     }
-
-
   
 
 
@@ -63,6 +65,7 @@ export const SignIn:FC = ({setStep}:any) => {
                         value={email} 
                         className="input" 
                         placeholder="Email"
+                        onChange={(e)=> {onChange(e)}}
                     />
                 </div>
                 <div className="sign-in__form--input">
@@ -98,7 +101,6 @@ export const SignIn:FC = ({setStep}:any) => {
                         <CallIcon/> 
                     </div>
                     
-
                 </div>
                 <h5 className="create-account-btn" onClick={()=> setStep(1)}>I don't have an account. create account</h5>
             </form>
