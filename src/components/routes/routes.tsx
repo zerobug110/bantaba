@@ -3,7 +3,8 @@ import {Nav} from '../nav/nav';
 import '../../index.css'
 import { lazy, Suspense,FC } from "react";
 import { Spinner } from "../spinner/spinner";
-
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 // lazy routes
 const UserProfile = lazy(() => import('../../pages/user-profile/user-profile').then(({UserProfile})=> ({default: UserProfile})))
 const Home = lazy(() => import('../../pages/home/home').then(({ Home }) => ({ default: Home })))
@@ -27,6 +28,7 @@ const AppRoutes:FC = () => {
                     <Route path="/user-profile" element={<UserProfile/>}/>
                 </Routes>
                </Suspense>
+               <ToastContainer/>
             </>
             
         )

@@ -41,12 +41,11 @@ export const SignIn:FC = ({setStep}:any) => {
                 if (userCredential.user) {
                     console.log("successful")
                     navigate("/") 
-
                 }
          
         } catch (error) {
             //@ts-ignore
-            console.log(error)
+            toast.error("bad user credentials")
         }
 
     }
