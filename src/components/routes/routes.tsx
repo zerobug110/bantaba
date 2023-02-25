@@ -1,10 +1,12 @@
 import {  Route, Routes  } from "react-router-dom"
 import {Nav} from '../nav/nav';
 import '../../index.css'
-import { lazy, Suspense,FC } from "react";
+import { lazy, Suspense,FC, useState, useEffect } from "react";
 import { Spinner } from "../spinner/spinner";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { auth } from "../../utils/firebase/firebase.config";
+
 // lazy routes
 const UserProfile = lazy(() => import('../../pages/user-profile/user-profile').then(({UserProfile})=> ({default: UserProfile})))
 const Home = lazy(() => import('../../pages/home/home').then(({ Home }) => ({ default: Home })))
@@ -12,7 +14,15 @@ const Chat = lazy(() => import('../../pages/chat/Chat').then(({ Chat }) => ({ de
 const Auth = lazy(()=> import ('../../pages/auth/auth').then(({Auth}) => ({default: Auth})))
 const Notifications = lazy(()=> import ('../../pages/notifications/notifications').then(({Notifications})=>({default: Notifications})))
 
+
 const AppRoutes:FC = () => {
+    const [user, setUser] = useState(null)
+    
+    // display user 
+    useEffect(()=>{
+        // @ts-ignore
+        setUser(auth.currentUser)
+    },[])
         return(
             <>
                <Suspense fallback={<Spinner/>}>
@@ -21,7 +31,13 @@ const AppRoutes:FC = () => {
                 </Routes>
 
                 <Nav/>
-                <Routes>     
+                <Routes>    
+                    {/* {
+                        user ?
+                        //@ts-ignore
+                        <h1>{user.displayName}</h1> :
+                        <h1>user not logged in</h1>
+                    }  */}
                     <Route index element={<Home/>}/>
                     <Route path="/chat" element={<Chat/>}/>
                     <Route path="/notifications" element={<Notifications/>}/>
