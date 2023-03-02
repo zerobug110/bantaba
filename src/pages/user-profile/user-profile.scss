@@ -10,7 +10,6 @@
         display: grid;
         grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
         
-    
         &__background {
             grid-column: full-start / full-end;
             height: 30rem;
@@ -23,7 +22,7 @@
         .tags-container {
             grid-column: full-start / full-end;
             padding: 1rem ;
-            background-color: $secondary-color;
+            // background-color: $secondary-color;
             
 
             display: grid;
@@ -148,6 +147,10 @@
                 &__list {
                     // background-color: $secondary-color;
                     height: 50rem;
+
+                    &--item {
+                        background-color: $primary-color;
+                    }
                 }
             }
         }

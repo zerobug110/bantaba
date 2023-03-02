@@ -39,7 +39,7 @@ export const SignIn:FC = ({setStep}:any) => {
 
                 // Signed in                 
                 if (userCredential.user) {
-                    console.log("successful")
+                    // console.log("successful")
                     navigate("/") 
                 }
          

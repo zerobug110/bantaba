@@ -46,8 +46,17 @@ export const UserProfile = () => {
                     </div>
                      <div className="mutual-friends">
                         <Card>
-                            <div className="mutual-friends__list">hello</div>
                             
+                            <div className="mutual-friends__list">
+                                {[0,1,2,3].map(item=> (
+                                    <div className="mutual-friends__list--item">
+                                        ebrima 
+                                    </div>
+                                ))
+
+                                }
+
+                            </div>
                         </Card>
                     </div>       
                 </div>
