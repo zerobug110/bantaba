@@ -6,6 +6,7 @@
     .user-profile {
         height: 30rem;
         background-color: $secondary-color;
+        
 
         display: grid;
         grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
@@ -70,6 +71,7 @@
             grid-column: col-start 1 / col-end;
             display: flex;
             gap: 3rem;
+            
 
             
             &--image {
@@ -78,7 +80,8 @@
                 padding: 2rem;
                 border-radius: 2rem;
                 background-color: $thirtialy-color;
-            
+                
+                border: .5rem solid $primary-color;
                 margin-top: -15rem;
                 // margin-top: 3rem;
 
@@ -108,6 +111,7 @@
                 // display: flex;
                 // align-items: center;
                 // justify-content: space-between;
+                
 
                 .user {
                     width: 100%;
