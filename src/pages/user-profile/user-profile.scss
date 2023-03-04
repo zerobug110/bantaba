@@ -151,9 +151,64 @@
                 &__list {
                     // background-color: $secondary-color;
                     height: 50rem;
-
+                    padding: 1rem;
                     &--item {
-                        background-color: $primary-color;
+
+                        // background-color: $thirtialy-color;
+                        // background-color: red;
+                        margin-bottom: 1rem;
+                        border-bottom: .1rem solid $thirtialy-color;
+                        padding: 1rem 0;
+
+                        
+                        .profile {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            &__image {
+                                width: 5rem;
+                                height: 5rem;
+                                border-radius: 50%;
+                                background-color: red;
+
+                                .img {
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    background-color: red;
+                                }
+                            }
+                            
+                            .username {
+                                background-color: $secondary-color;
+                                text-transform: capitalize;
+                                font-weight: 400;
+                            }
+
+
+                        }
+
+                        .mutual-actions {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            text-transform: capitalize;
+
+                            margin-top: 1rem;
+
+                            .follow {
+                                background-color: $thirtialy-color;
+                                border-radius: 2rem;
+                                padding: .1rem 1rem;
+                            }
+
+                            .ignore {
+                                background-color: $thirtialy-color;
+                                border-radius: 2rem;
+                                padding: .1rem 1rem;
+                            }
+                        }
                     }
                 }
             }

@@ -50,7 +50,16 @@ export const UserProfile = () => {
                             <div className="mutual-friends__list">
                                 {[0,1,2,3].map(item=> (
                                     <div className="mutual-friends__list--item">
-                                        ebrima 
+                                        <div className="profile">
+                                            <div className="profile__image">
+                                                <img src="" alt="" className="img" />
+                                            </div>
+                                            <div className="username">ebrima nyassi</div>
+                                        </div>
+                                        <div className="mutual-actions">
+                                            <div className="follow">follow</div>
+                                            <div className="ignore">ignore</div>
+                                        </div>
                                     </div>
                                 ))
 
