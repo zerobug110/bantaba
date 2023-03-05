@@ -38,7 +38,7 @@ const AppRoutes:FC = () => {
                     <Route path="/notifications" element={<Notifications/>}/>
                     <Route path="/user-profile" element={<UserProfile/>}/>
                 </Routes>
-                <AppDialog/>
+                {/* <AppDialog/> */}
                </Suspense>
                <ToastContainer/>
             </>
