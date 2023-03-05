@@ -1,0 +1,123 @@
+@import "../../assets/styles/variables.scss";
+.auth {
+    grid-column: full-start  / full-end;
+    background-color: $primary-color;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 1rem;
+
+
+    .sign-up, .sign-in {
+        width: 40rem;
+        height: 50rem;
+        padding: 3rem 1rem;
+        text-align: center;
+        border-radius: 1rem;
+        background-color: $secondary-color;
+
+        display: grid; 
+        place-items: center;
+
+
+        &__label {
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+
+        &__form {
+            width: 100%;
+            padding: 1rem;
+
+            &--input {
+                width: 100%;
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .input {
+                    width: 100%;
+                    background-color: $thirtialy-color;
+                    padding: 1rem;
+                    outline: none;
+                    border: none;
+                    color: $white;
+                    border-radius: 2rem;
+
+                    
+                }
+
+                .password-input {
+                    width: 100%;
+                    position: relative;
+                }
+
+                .visible-icon {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    fill: $primary-color;
+
+                    position: absolute;
+                    right: 3rem;
+                    cursor: pointer;      
+
+                }
+            }
+        }
+
+        &__submit-btn {
+            color: $white;
+            font-weight: 550;
+            margin-top: 2rem;
+            border: none;
+            outline: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            background-color: $thirtialy-color;
+
+        }
+
+   
+        &__with-social-media {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 1rem;
+
+            .icon {
+                width: 5rem;
+                height: 5rem;
+                fill: $white;
+                cursor: pointer;
+                padding: .7rem;
+                border-radius: 1rem;
+                margin-top: 1rem;
+
+                background-color: $thirtialy-color;
+            }
+        }
+
+        &__with-label {
+            font: 1.7rem;
+            text-transform: capitalize;
+            margin-top: 2rem;
+        }
+
+        .create-account-btn {
+            width: fit-content;
+            font-weight: 550;
+            margin-top: 2rem;
+            // background-color: $thirtialy-color;
+            padding: 1rem;
+            border-radius: 2rem;
+            margin: 2rem auto;
+            cursor: pointer;
+        }
+    }
+
+}

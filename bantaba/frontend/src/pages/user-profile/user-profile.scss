@@ -1,0 +1,219 @@
+@import "../../assets/styles/variables.scss";
+.user-profile-content {
+    grid-column: full-start  / full-end;
+    // height: 100vh;
+    margin-top: 2rem;
+    .user-profile {
+        height: 30rem;
+        background-color: $secondary-color;
+        
+
+        display: grid;
+        grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
+        
+        &__background {
+            grid-column: full-start / full-end;
+            height: 30rem;
+            .img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .tags-container {
+            grid-column: full-start / full-end;
+            padding: 1rem ;
+            // background-color: $secondary-color;
+            
+
+            display: grid;
+            grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
+            gap: 1rem;
+            
+
+            &__list {
+                grid-column: col-start 3 / col-end;
+
+                display: flex;
+                align-items: center;
+                gap: 3rem;
+
+                &--item {
+                    font-weight: 550;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                }
+                
+            }
+
+            .follow-link {
+                background-color: $thirtialy-color;
+                padding: .5rem 2rem;
+                border-radius: 2rem;
+                text-transform: capitalize;
+                font-weight: 550;
+                cursor: pointer;
+            }
+
+             .message-user {
+                font-weight: 550;
+                text-transform: capitalize;
+                padding: .5rem 2rem;
+                border-radius: 2rem;
+                background-color: $thirtialy-color;
+                margin-top: 2rem;
+                text-align: center;
+
+            }
+        }
+
+        &__details {
+            grid-column: col-start 1 / col-end;
+            display: flex;
+            gap: 3rem;
+            
+
+            
+            &--image {
+                width: 25rem;
+                height: 30rem;
+                padding: 2rem;
+                border-radius: 2rem;
+                background-color: $thirtialy-color;
+                
+                border: .5rem solid $primary-color;
+                margin-top: -15rem;
+                // margin-top: 3rem;
+
+                .image-container {
+                    margin: 0 auto;
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    border: .4rem solid $secondary-color;
+                }
+                
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+        
+            }
+
+            &--content {
+                width: 100%;
+                height: 6rem;
+                background-color: $secondary-color;
+            }
+
+            &--info {
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
+                
+
+                .user {
+                    width: 100%;
+                    text-align: center;
+                    line-height: 1.4;
+                    &__name {
+                        width: 100%;                    
+                        font-weight: 400;
+                    }
+                    
+                    &__username {
+                        font-weight: 400;
+                        margin-top: -.4rem;
+                        // text-align: center;
+                    }
+
+                    &__status {
+                        font-size: 1.4rem;
+                        font-style: italic;
+                        color: $dark-white;
+                        transform: translateY(1rem);
+                    }
+
+                }
+
+            }
+        
+            .user-posts {
+                margin-top: 3rem;
+            }
+
+            .mutual-friends {
+                width: 30rem;
+                height: 50rem;
+                margin-top: 3rem;
+
+                &__list {
+                    // background-color: $secondary-color;
+                    height: 50rem;
+                    padding: 1rem;
+                    &--item {
+
+                        // background-color: $thirtialy-color;
+                        // background-color: red;
+                        margin-bottom: 1rem;
+                        border-bottom: .1rem solid $thirtialy-color;
+                        padding: 1rem 0;
+
+                        
+                        .profile {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            &__image {
+                                width: 5rem;
+                                height: 5rem;
+                                border-radius: 50%;
+                                background-color: red;
+
+                                .img {
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50%;
+                                    background-color: red;
+                                }
+                            }
+                            
+                            .username {
+                                background-color: $secondary-color;
+                                text-transform: capitalize;
+                                font-weight: 400;
+                            }
+
+
+                        }
+
+                        .mutual-actions {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            text-transform: capitalize;
+
+                            margin-top: 1rem;
+
+                            .follow {
+                                background-color: $thirtialy-color;
+                                border-radius: 2rem;
+                                padding: .1rem 1rem;
+                            }
+
+                            .ignore {
+                                background-color: $thirtialy-color;
+                                border-radius: 2rem;
+                                padding: .1rem 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
