@@ -1,10 +1,20 @@
-import { FC } from "react"
+import { FC } from 'react';
+import './app-dialog.scss';
 
 export const AppDialog:FC = () => {
     return(
-        // <Portal>
-             <h1>App dialog</h1>
-        // {/* </Portal> */}
-       
+        <div className="overlaye">
+            <div className="modal">
+                <div className="modal__header">
+                    header
+                </div>
+                <div className="modal__body">
+                    body
+                </div>
+                <div className="madal__footer">
+                    footer
+                </div>
+            </div>
+        </div>       
     )
 }

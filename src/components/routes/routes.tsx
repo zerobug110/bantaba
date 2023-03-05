@@ -6,6 +6,7 @@ import { Spinner } from "../spinner/spinner";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { auth } from "../../utils/firebase/firebase.config";
+import { AppDialog } from "../app-dialog/app-dialog";
 
 // lazy routes
 const UserProfile = lazy(() => import('../../pages/user-profile/user-profile').then(({UserProfile})=> ({default: UserProfile})))
@@ -32,17 +33,12 @@ const AppRoutes:FC = () => {
 
                 <Nav/>
                 <Routes>    
-                    {/* {
-                        user ?
-                        //@ts-ignore
-                        <h1>{user.displayName}</h1> :
-                        <h1>user not logged in</h1>
-                    }  */}
                     <Route index element={<Home/>}/>
                     <Route path="/chat" element={<Chat/>}/>
                     <Route path="/notifications" element={<Notifications/>}/>
                     <Route path="/user-profile" element={<UserProfile/>}/>
                 </Routes>
+                <AppDialog/>
                </Suspense>
                <ToastContainer/>
             </>
