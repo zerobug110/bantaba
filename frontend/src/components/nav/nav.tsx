@@ -1,5 +1,5 @@
 
-import { ChatIcon, HomeIcon, MagnifyingGlassIcon, NotificationIcon } from '../../assets/icons/icons';
+import { ChatIcon, HomeIcon, MagnifyingGlassIcon, NotificationIcon, VideoIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './nav.scss';
 import { Navigation, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -31,6 +31,9 @@ export const Nav:FC = () => {
                 </div>
                 <div className="header__nav-list--item" onClick={()=> navigate("/chat")}>
                     <ChatIcon/>
+                </div>
+                <div className="header__nav-list--item" onClick={()=> navigate("/live")}>
+                    <VideoIcon/>
                 </div>
             </div>
 

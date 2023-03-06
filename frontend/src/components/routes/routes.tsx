@@ -14,7 +14,7 @@ const Home = lazy(() => import('../../pages/home/home').then(({ Home }) => ({ de
 const Chat = lazy(() => import('../../pages/chat/Chat').then(({ Chat }) => ({ default: Chat })))
 const Auth = lazy(()=> import ('../../pages/auth/auth').then(({Auth}) => ({default: Auth})))
 const Notifications = lazy(()=> import ('../../pages/notifications/notifications').then(({Notifications})=>({default: Notifications})))
-
+const LiveStream = lazy(()=> import('../../pages/live-stream/live-stream').then(({LiveStream}) => ({default: LiveStream})))
 
 const AppRoutes:FC = () => {
     const [user, setUser] = useState(null)
@@ -37,6 +37,7 @@ const AppRoutes:FC = () => {
                     <Route path="/chat" element={<Chat/>}/>
                     <Route path="/notifications" element={<Notifications/>}/>
                     <Route path="/user-profile" element={<UserProfile/>}/>
+                    <Route path="/live" element={<LiveStream/>}/>
                 </Routes>
                 {/* <AppDialog/> */}
                </Suspense>

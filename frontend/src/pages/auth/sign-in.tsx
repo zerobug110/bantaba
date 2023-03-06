@@ -79,13 +79,12 @@ export const SignIn:FC = ({setStep}:any) => {
                     ></input>
                     <span onClick={()=> {handleShowPassword()}} className ="visible-icon">
                         <VisibleIcon/>
-                        {/* <AppleIcon/> */}
                     </span>
                 </div>
 
                 <button className="sign-in__submit-btn" onClick={signIn}>sign in</button>
                 <span className="sign-in__with-google">
-                    {/* <GoogleIcon />  */}
+                    <GoogleIcon /> 
                 </span>
                 <h5 className="sign-in__with-label">sign in with </h5>
                 <div className="sign-in__with-social-media">
