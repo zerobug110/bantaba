@@ -1,0 +1,14 @@
+@import '../../assets/styles/variables.scss'; 
+
+.live {
+    margin-top: 2rem;
+    grid-column: col-start 1 / col-end;
+    // margin: 0 auto;
+    &__video {
+        margin: 0 auto;
+        max-width: 40rem;
+        height: 55rem;
+        border-radius: 2rem;
+        background-color: $secondary-color;
+    }
+}

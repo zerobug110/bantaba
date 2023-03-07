@@ -1,5 +1,11 @@
+import './live-stream.scss';
+
 export const LiveStream = () => {
     return(
-        <h1>LiveStream</h1>
+        <div className="live">
+            <div className="live__video">
+                
+            </div>
+        </div>
     )
 }
