@@ -6,7 +6,8 @@ import { Spinner } from "../spinner/spinner";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { auth } from "../../utils/firebase/firebase.config";
-import { AppDialog } from "../app-dialog/app-dialog";
+// import { AppDialog } from "../app-dialog/app-dialog";
+import React from "react";
 
 // lazy routes
 const UserProfile = lazy(() => import('../../pages/user-profile/user-profile').then(({UserProfile})=> ({default: UserProfile})))
@@ -15,14 +16,15 @@ const Chat = lazy(() => import('../../pages/chat/Chat').then(({ Chat }) => ({ de
 const Auth = lazy(()=> import ('../../pages/auth/auth').then(({Auth}) => ({default: Auth})))
 const Notifications = lazy(()=> import ('../../pages/notifications/notifications').then(({Notifications})=>({default: Notifications})))
 const LiveStream = lazy(()=> import('../../pages/live-stream/live-stream').then(({LiveStream}) => ({default: LiveStream})))
+const ProfileSettings = lazy(()=> import('../../pages/profile-settings/profile-settings').then(({ProfileSettings})=> ({default: ProfileSettings})))
 
 const AppRoutes:FC = () => {
-    const [user, setUser] = useState(null)
+    // const [user, setUser] = useState(null)
     
     // display user 
     useEffect(()=>{
         // @ts-ignore
-        setUser(auth.currentUser)
+        // setUser(auth.currentUser)
     },[])
         return(
             <>
@@ -38,6 +40,7 @@ const AppRoutes:FC = () => {
                     <Route path="/notifications" element={<Notifications/>}/>
                     <Route path="/user-profile" element={<UserProfile/>}/>
                     <Route path="/live" element={<LiveStream/>}/>
+                    <Route path="/profile-settings" element={<ProfileSettings/>}/>
                 </Routes>
                 {/* <AppDialog/> */}
                </Suspense>

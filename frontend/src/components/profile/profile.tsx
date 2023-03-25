@@ -1,3 +1,4 @@
+import React from 'react';
 import { FC, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../utils/firebase/firebase.config';
@@ -40,16 +41,9 @@ export const Profile:FC = () => {
                   </div>
                 </div>
                 <div className="profile__about">
-                    {/* {
-                        user ?
-                        //@ts-ignore
-                        <h1>{user.displayName}</h1> :
-                        <h1>user not logged in</h1>
-                    } */}
-
                     <p className="profile__about--text">"I am a photographer and love to painting as well"</p>
                 </div>
-                <div className="profile__edit" onClick={()=> navigate("/user-profile")}>
+                <div className="profile__edit" onClick={()=> navigate("/profile-settings")}>
                     <span className="profile__edit--btn">view profile</span>
                 </div>
             </div>
