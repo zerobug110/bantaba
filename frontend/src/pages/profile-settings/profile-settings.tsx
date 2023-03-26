@@ -4,7 +4,9 @@ import React, { FC } from "react"
 export const ProfileSettings:FC = () => {
     return(
         <div className="profile-settings">
-            <h1>profile settings</h1>
+            <div className="profile-settings__side-bar">
+                <h1>setting</h1>
+            </div>
         </div>
     )
 }
