@@ -10,5 +10,29 @@
         height: 55rem;
         border-radius: 2rem;
         background-color: $secondary-color;
+        position: relative;
+
+        &--frame {
+            // background-color: red;
+            // height: 100%;
+            // z-index: -1;
+            // position: relative;
+        }
+
+        &--reaction {
+            width: 6rem;
+            height: 15rem;
+            
+            margin-top: 15rem;
+            margin-right: 1rem;
+            margin-left: auto;
+            
+            .icon {
+                height: 5rem;
+
+                margin-bottom: 1rem;
+                background-color: $primary-color;
+            }
+        }
     }
 }
