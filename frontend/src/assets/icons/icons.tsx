@@ -1,5 +1,6 @@
 // https://iconscout.com/icons/
 
+import React from "react"
 import { FC } from "react"
 
 export const LogoutIcon:FC = () => {
