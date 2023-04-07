@@ -4,6 +4,7 @@ import { Card } from '../card/card';
 import './nav.scss';
 import { Navigation, Route, useLocation, useNavigate } from 'react-router-dom';
 import { FC } from 'react';
+import React from 'react';
 
 export const Nav:FC = () => {
     const navigate = useNavigate()
