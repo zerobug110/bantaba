@@ -18,24 +18,16 @@ export const Auth:FC = () => {
     const VIEWS = [
 		({ index, active, transitionState }:any) => (
 			<section
-				className="first-slide slider"
+				className="auth"
 				hidden={index !== STEPS.SIGN_IN}
 			>
-				<div>
-					<div className="slider-header">
-						<span className="app-icon">
-							{/* <CloseIcon></CloseIcon> */}
-						</span>
-
-					</div>
-				</div>
 				{/* @ts-ignore */}
                 <SignIn setStep={setStep}/>
 			</section>
 		),
 		({ index, active, transitionState }:any) => (
 			<section
-				className="secound-slide slider"
+				className="auth"
 				hidden={index !== STEPS.SIGN_UP}
 			>
 			{/* @ts-ignore */}
