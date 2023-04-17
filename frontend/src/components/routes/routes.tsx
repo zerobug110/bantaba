@@ -3,9 +3,7 @@ import {Nav} from '../nav/nav';
 import '../../index.css'
 import { lazy, Suspense,FC, useState, useEffect } from "react";
 import { Spinner } from "../spinner/spinner";
-import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { auth } from "../../utils/firebase/firebase.config";
 // import { AppDialog } from "../app-dialog/app-dialog";
 import React from "react";
 
@@ -44,7 +42,6 @@ const AppRoutes:FC = () => {
                 </Routes>
                 {/* <AppDialog/> */}
                </Suspense>
-               <ToastContainer/>
             </>
             
         )

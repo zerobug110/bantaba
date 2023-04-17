@@ -1,10 +1,10 @@
 
-import { FC, useState } from "react"
+import React, { FC, useState } from "react"
 import { AppleIcon, GoogleIcon, CallIcon, VisibleIcon } from '../../assets/icons/icons';
 import {auth} from '../../utils/firebase/firebase.config';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 
 export const SignIn:FC = ({setStep}:any) => {
@@ -84,7 +84,7 @@ export const SignIn:FC = ({setStep}:any) => {
 
                 <button className="sign-in__submit-btn" onClick={signIn}>sign in</button>
                 <span className="sign-in__with-google">
-                    <GoogleIcon /> 
+                    {/* <GoogleIcon />  */}
                 </span>
                 <h5 className="sign-in__with-label">sign in with </h5>
                 <div className="sign-in__with-social-media">
@@ -97,11 +97,9 @@ export const SignIn:FC = ({setStep}:any) => {
                     <div className="icon">
                         <CallIcon/> 
                     </div>
-                    
                 </div>
                 <h5 className="create-account-btn" onClick={()=> setStep(1)}>I don't have an account. create account</h5>
             </form>
-            <ToastContainer/>
         </div>
     )
 }
