@@ -1,5 +1,4 @@
-
-
+import React from 'react';
 import {createUserWithEmailAndPassword,updateProfile} from 'firebase/auth'
 import { setDoc, doc, serverTimestamp, } from 'firebase/firestore';
 import { FC, useState } from "react"
@@ -78,7 +77,7 @@ export const  SignUp:FC = ({setStep}:any) => {
                         value={name} 
                         id="name" 
                         className="input" 
-                        placeholder="Name"
+                        placeholder="username"
                         onChange={onChange}
                     />
                 </div>
