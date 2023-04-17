@@ -1,5 +1,5 @@
 
-import { ChatIcon, HomeIcon, MagnifyingGlassIcon, NotificationIcon, VideoIcon } from '../../assets/icons/icons';
+import { ChatIcon, DownArrowIcon, HomeIcon, MagnifyingGlassIcon, NotificationIcon, VideoIcon } from '../../assets/icons/icons';
 import { Card } from '../card/card';
 import './nav.scss';
 import { Navigation, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -46,7 +46,7 @@ export const Nav:FC = () => {
                     </div>
                     <span className="username">muhammed bojang</span>
                     <div className="drop-down-arrow">
-                        {/* <DownArrowIcon/> */}
+                        <DownArrowIcon/>
                         {/* <UpArrowIcon/> */}
                     </div>
                 </div>

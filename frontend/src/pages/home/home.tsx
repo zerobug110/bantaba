@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { Activities } from '../../components/activities/activites';
 import { Post } from '../../components/post/post';
 import { Profile } from '../../components/profile/profile';

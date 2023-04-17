@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React,{ FC } from 'react';
 import { Card } from '../card/card';
 import './activies.scss';
 

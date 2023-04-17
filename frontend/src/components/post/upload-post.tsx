@@ -1,3 +1,4 @@
+import React from 'react'
 import { ImageIcon, VideoIcon } from '../../assets/icons/icons';
 import './post-style.scss';
 export const UploadPost = () => {
