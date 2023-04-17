@@ -4,6 +4,7 @@ import { SignIn } from './sign-in'
 import { SignUp } from "./sign-up"
 
 import ViewSlider from 'react-view-slider'
+import React from 'react';
 
 export const Auth:FC = () => {
     enum STEPS {
