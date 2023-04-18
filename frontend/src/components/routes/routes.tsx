@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import { AppDialog } from "../app-dialog/app-dialog";
 import React from "react";
 
-// lazy routes
+// lazy routes i.e code spliting
 const UserProfile = lazy(() => import('../../pages/user-profile/user-profile').then(({UserProfile})=> ({default: UserProfile})))
 const Home = lazy(() => import('../../pages/home/home').then(({ Home }) => ({ default: Home })))
 const Chat = lazy(() => import('../../pages/chat/Chat').then(({ Chat }) => ({ default: Chat })))

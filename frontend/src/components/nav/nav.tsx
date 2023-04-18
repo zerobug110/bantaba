@@ -8,7 +8,6 @@ import React from 'react';
 
 export const Nav:FC = () => {
     const navigate = useNavigate()
-    const location = useLocation()
 
     return(
         <header className="header">
