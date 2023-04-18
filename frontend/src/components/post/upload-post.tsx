@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { ImageIcon, VideoIcon } from '../../assets/icons/icons';
 import './post-style.scss';
-export const UploadPost = () => {
+export const UploadPost:FC = () => {
     return (
         <div className="post__upload--item">
             <div className="profile-input">
