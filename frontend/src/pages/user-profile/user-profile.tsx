@@ -3,6 +3,7 @@ import { PostItem } from '../../components/post/post-item';
 import '../../components/post/post-style.scss'
 import { Card } from '../../components/card/card';
 import React from 'react';
+
 export const UserProfile = () => {
     return (
         <div className="user-profile-content">
@@ -71,7 +72,6 @@ export const UserProfile = () => {
                     </div>       
                 </div>
             </div>
-            
         </div>
     )
 }
