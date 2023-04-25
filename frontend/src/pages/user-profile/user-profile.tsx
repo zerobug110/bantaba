@@ -42,13 +42,11 @@ export const UserProfile = () => {
                             <Card>
                                 <PostItem/>
                             </Card>
-
                         ))} 
                         </div>
                     </div>
                      <div className="mutual-friends">
                         <Card>
-                            
                             <div className="mutual-friends__list">
                                 {[0,1,2,3].map(item=> (
                                     <div className="mutual-friends__list--item">
@@ -63,10 +61,7 @@ export const UserProfile = () => {
                                             <div className="ignore">ignore</div>
                                         </div>
                                     </div>
-                                ))
-
-                                }
-
+                                ))}
                             </div>
                         </Card>
                     </div>       

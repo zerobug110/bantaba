@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { SendIcon } from '../../assets/icons/icons';
 import './chat-message.scss';
+import React from 'react';
 
 export const ChatList:FC = () => {
     return(
@@ -15,6 +16,19 @@ export const ChatList:FC = () => {
                 <div className="chat__list--received">
                     <span className="received-message">
                     Lorem ipsum dolor sit amet consectetur dolor sit amet consectetur dolor sit amet consectetur dolor sit amet consectetur 
+                    </span>
+                    <div className="time">1 min ago</div>
+                </div>
+
+                <div className="chat__list--sent">
+                    <span className="sent-message">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dicta itaque laudantium at enim reprehenderit, adipisci esse. Velit quas perferendis fugiat architecto quidem, non sint, odio eius esse laudantium vitae?
+                    </span>
+                    <div className="time">1 min ago</div>
+                </div>
+                <div className="chat__list--sent">
+                    <span className="sent-message">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dicta itaque laudantium at enim reprehenderit, adipisci esse. Velit quas perferendis fugiat architecto quidem, non sint, odio eius esse laudantium vitae?
                     </span>
                     <div className="time">1 min ago</div>
                 </div>

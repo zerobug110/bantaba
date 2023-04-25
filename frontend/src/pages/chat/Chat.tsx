@@ -4,6 +4,7 @@ import { ContactList } from '../../components/contacts/contact-list';
 import './chat.scss';
 import { Data } from '../../components/data/data';
 import { FC } from 'react';
+import React from 'react';
 
 export const Chat:FC = () => {
   console.log(Data)
