@@ -4,12 +4,11 @@
     // height: 100vh;
     margin-top: 2rem;
     .user-profile {
-        height: 30rem;
+        height: 20rem;
         background-color: $secondary-color;
         
-
         display: grid;
-        grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
+        grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 14rem))[col-end] 1fr  5rem[full-end];
         
         &__background {
             grid-column: full-start / full-end;
@@ -27,7 +26,7 @@
             
 
             display: grid;
-            grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 18rem))[col-end] 1fr  5rem[full-end];
+            grid-template-columns: [full-start]5rem 1fr repeat(8,[col-start] minmax(min-content, 14rem))[col-end] 1fr  5rem[full-end];
             gap: 1rem;
             
 
