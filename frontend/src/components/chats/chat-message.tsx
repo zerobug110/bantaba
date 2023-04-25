@@ -22,7 +22,7 @@ export const ChatList:FC = () => {
 
                 <div className="chat__list--sent">
                     <span className="sent-message">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dicta itaque laudantium at enim reprehenderit, adipisci esse. Velit quas perferendis fugiat architecto quidem, non sint, odio eius esse laudantium vitae?
+                    Ipsam dicta itaque laudantium at enim reprehenderit, adipisci esse. Velit quas perferendis fugiat architecto quidem, non sint, odio eius esse laudantium vitae?
                     </span>
                     <div className="time">1 min ago</div>
                 </div>
