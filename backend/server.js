@@ -1,4 +1,4 @@
-const app = require("./app/app")
+const app = require("./App/app")
 const http = require("http")
 // console.log(app)
 const port = process.env.PORT || 2020;
